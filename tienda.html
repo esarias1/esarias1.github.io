@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="description" content="descripción">
+    <meta name="keywords" content="keywords">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/miestilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<div class="container-fluid p-0">
+    <header class="pe-2">
+        <nav class="navbar navbar-expand-lg navbar-dark ">
+            <div class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img src="img/logo.png" alt="logo"></a></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="main.html" target="_blank">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reservas.html" target="_blank">Reservas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="galeria.html" target="_blank">Galeria</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Japón
+                        </a>
+                        <ul class="dropdown-menu desplegable">
+                            <li><a class="dropdown-item" href="lugares.html">Lugares</a></li>
+                            <li><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html" target="_blank">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" target="_blank">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contacto.html" target="_blank">Contacto</a>
+                    </li>
+                    <li class="nav-item">
+                        <form id="buscar" class="form-inline" action="/buscar" method="get">
+                            <div class="input-group">
+                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar" name="query">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <div id="titulo" class="text-start col-12 col-lg-6 ps-5"><h3>Titulo</h3></div>
+            <div id="subtitulo" class="text-end col-12 col-lg-6">
+                <p id="tag1" class="d-none d-md-block d-lg-none text-end">Subtítulo</p>
+                <p id="tag2" class="d-none d-lg-block text-end">Tag</p>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="text-center mt-5 p-2">
+            <h2>Amigurumi</h2>
+        </div>
+        <section class="my-3 p-2">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/amigurumi1.jpg" alt="John Wick">
+                        <div class="card-body">
+                            <h5 class="card-title">John Wick</h5>
+                            <p class="card-text precio">27,90 &euro;</p>
+                            <button type="button" class="btn btn-success">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/amigurumi2.jpg" alt="Capitán América">
+                        <div class="card-body">
+                            <h5 class="card-title">Capitán América</h5>
+                            <p class="card-text precio">32,90 &euro;</p>
+                            <button type="button" class="btn btn-success">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/amigurumi3.jpg" alt="Jon Snow">
+                        <div class="card-body">
+                            <h5 class="card-title">Jon Snow</h5>
+                            <p class="card-text precio">27,90 &euro;</p>
+                            <button type="button" class="btn btn-success">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/amigurumi4.jpg" alt="Luffy">
+                        <div class="card-body">
+                            <h5 class="card-title">Luffy</h5>
+                            <p class="card-text precio">24,90 &euro;</p>
+                            <button type="button" class="btn btn-success">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+        <section class="my-3 p-2">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/amigurumi5.jpg" alt="Jack Sparrow">
+                        <div class="card-body">
+                            <h5 class="card-title">Jack Sparrow</h5>
+                            <p class="card-text precio">35,90 &euro;</p>
+                            <button type="button" class="btn btn-success">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/amigurumi6.jpg" alt="Wonder Woman">
+                        <div class="card-body">
+                            <h5 class="card-title">Wonder Woman</h5>
+                            <p class="card-text precio">34,90 &euro;</p>
+                            <button type="button" class="btn btn-success">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/amigurumi7.jpg" alt="Harley Quinn">
+                        <div class="card-body">
+                            <h5 class="card-title">Harley Quinn</h5>
+                            <p class="card-text precio">Texto</p>
+                            <button type="button" class="btn btn-success">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/amigurumi8.jpg" alt="Darth Vader">
+                        <div class="card-body">
+                            <h5 class="card-title">Darth Vader</h5>
+                            <p class="card-text precio">23,90 &euro;</p>
+                            <button type="button" class="btn btn-success">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="my-3 p-2">
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/amigurumi9.jpg" alt="Batman">
+                        <div class="card-body">
+                            <h5 class="card-title">Batman</h5>
+                            <p class="card-text precio">21,90 &euro;</p>
+                            <button type="button" class="btn btn-success">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/amigurumi10.jpg" alt="Wolverine">
+                        <div class="card-body">
+                            <h5 class="card-title">Wolverine</h5>
+                            <p class="card-text precio">22,90 &euro;</p>
+                            <button type="button" class="btn btn-success">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/amigurumi11.jpg" alt="Groot">
+                        <div class="card-body">
+                            <h5 class="card-title">Groot</h5>
+                            <p class="card-text precio">36,90 &euro;</p>
+                            <button type="button" class="btn btn-success">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div class="card h-100">
+                        <img class="card-img-top" src="img/amigurumi12.jpg" alt="Iron Man">
+                        <div class="card-body">
+                            <div class="row">
+                            <h5 class="card-title">Iron Man</h5>
+                            <p class="card-text precio">27,90 &euro;</p>
+                            </div>
+                            <button type="button" class="btn btn-success">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+    </main>
+
+    <footer class="text-center">
+        <p><span class="d-none d-lg-inline">Teléfono: <a href="tel:123456789">123-456-789</a> |</span> <span class="d-none d-md-inline">Correo: <a href="mailto:info@dominio.com">info@dominio.com</a></span></p>
+        <p class="d-none d-lg-block">Dirección</p>
+        <p>&copy2024 Dominio. Todos los derechos reservados.</p>
+    </footer>
+
+</div>
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

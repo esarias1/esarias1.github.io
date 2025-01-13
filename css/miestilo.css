@@ -116,7 +116,7 @@ input[type="radio"]:checked + label + span {
 }
 
 .dropdown-menu{
-    border: 2px solid #212529;
+    outline: 2px solid #212529;
     background-color: #000000;
     color: #FFFFFF;
 }
@@ -127,28 +127,34 @@ input[type="radio"]:checked + label + span {
 }
 
 .dropdown-item:hover{
-    border: 1px solid #5cb85c;
+    outline: 1px solid #5cb85c;
     border-radius: 0.25rem;
     color: #FFFFFF;
     background-color: #212529;
 }
 
+.nav-item:hover {
+    outline: 1px solid #5cb85c;
+    border-radius: 0.25rem;
+    background-color: #212529;
+}
+
+.card{
+    max-height:30rem;
+}
+
+.card-body{
+    display:flex;
+    flex-direction: column;
+    justify-content:space-between;
+}
+
 .card-img-top {
-    width: 100%;
-    height: 90%;
+    width:100%;
+    height: 70%;
     object-fit: cover;
 }
 
-.card-body {
-    padding: 1rem;
-}
-
-.card-title {
-    font-size: 1.25rem;
-    font-weight: bold;
-}
-
-.card-text {
-    font-size: 1rem;
-    color: #555;
+.precio{
+    color:#5cb85c;
 }
