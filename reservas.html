@@ -14,10 +14,8 @@
 <div class="container-fluid p-0">
     <header class="pe-2">
         <nav class="navbar navbar-expand-lg navbar-dark ">
-            <div class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img
-                    src="img/logo.png" alt="logo"></a></div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
+            <div class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img src="img/logo.png" alt="logo"></a></div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
@@ -26,10 +24,26 @@
                         <a class="nav-link" href="main.html" target="_blank">Inicio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="lugares.html" target="_blank">Lugares</a>
+                        <a class="nav-link" href="reservas.html" target="_blank">Reservas</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="galeria.html" target="_blank">Galeria</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Japón
+                        </a>
+                        <ul class="dropdown-menu desplegable">
+                            <li><a class="dropdown-item" href="lugares.html">Lugares</a></li>
+                            <li><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tienda.html" target="_blank">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="blog.html" target="_blank">Blog</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contacto.html" target="_blank">Contacto</a>
@@ -37,8 +51,7 @@
                     <li class="nav-item">
                         <form id="buscar" class="form-inline" action="/buscar" method="get">
                             <div class="input-group">
-                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar"
-                                       name="query">
+                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar" name="query">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                                 </div>
@@ -61,7 +74,7 @@
         <div class="text-center mt-5">
             <h2>Formulario de reserva</h2>
         </div>
-        <form action="/action_page.php" class="p-4 my-3">
+        <form action="/action_page.php" class="p-5 my-3">
             <fieldset>
                 <legend>Datos personales</legend>
                 <div class="row">
@@ -95,7 +108,7 @@
                 </div>
             </fieldset>
 
-            <fieldset>
+            <fieldset class="mt-4">
                 <legend>Datos reserva</legend>
                 <div class="row mt-2">
                     <div class="col-xs-12 col-md-4">
@@ -205,6 +218,9 @@
                     </div>
                 </div>
             </fieldset>
+            <div class="mt-2 d-flex justify-content-center">
+                <button type="submit" class="btn btn-success">Enviar</button>
+            </div>
         </form>
     </main>
 

@@ -4,7 +4,7 @@ header {
 }
 
 main {
-    background-color: #FFFFFF;
+    background-color: #212529;
 }
 
 footer {
@@ -14,6 +14,10 @@ footer {
 
 a{
     text-decoration:none;
+}
+
+span>a{
+    color:#5cb85c;
 }
 
 .tarjeta {
@@ -109,6 +113,24 @@ input[type="radio"] + label + span {
 }
 input[type="radio"]:checked + label + span {
     display: block;
+}
+
+.dropdown-menu{
+    border: 2px solid #212529;
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+.dropdown-item{
+    color: #FFFFFF;
+    background-color: transparent;
+}
+
+.dropdown-item:hover{
+    border: 1px solid #5cb85c;
+    border-radius: 0.25rem;
+    color: #FFFFFF;
+    background-color: #212529;
 }
 
 .card-img-top {
