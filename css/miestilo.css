@@ -4,7 +4,7 @@ header {
 }
 
 main {
-    background-color: #212529;
+<!--    background-color: #212529; -->
 }
 
 footer {
@@ -16,8 +16,16 @@ a{
     text-decoration:none;
 }
 
-span>a{
+span>a, cite, time{
     color:#5cb85c;
+}
+
+hgroup{
+    line-height: 1rem;
+}
+
+.meses{
+    list-style-type: none;
 }
 
 .tarjeta {
@@ -119,6 +127,7 @@ input[type="radio"]:checked + label + span {
     outline: 2px solid #212529;
     background-color: #000000;
     color: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .dropdown-item{
@@ -133,7 +142,7 @@ input[type="radio"]:checked + label + span {
     background-color: #212529;
 }
 
-.nav-item:hover {
+nav-item:hover {
     outline: 1px solid #5cb85c;
     border-radius: 0.25rem;
     background-color: #212529;
@@ -141,6 +150,7 @@ input[type="radio"]:checked + label + span {
 
 .card{
     max-height:30rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .card-body{
