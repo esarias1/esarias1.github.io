@@ -142,10 +142,17 @@ input[type="radio"]:checked + label + span {
     background-color: #212529;
 }
 
-nav-item:hover {
+li.header:hover {
     outline: 1px solid #5cb85c;
     border-radius: 0.25rem;
     background-color: #212529;
+}
+
+button.tabs{
+    color:grey;
+}
+button.tabs.active{
+    color:#000000;
 }
 
 .card{
