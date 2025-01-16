@@ -2,9 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <meta name="description" content="descripción">
-    <meta name="keywords" content="keywords">
+    <title>Viajes Nihon-GO</title>
+    <meta name="description" content="Viajes turísticos Nihongo, conoce Japón en español">
+    <meta name="keywords" content="Japón, Nihon, viajes, turismo, español, japonés, vacaciones, vuelos, blog">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+    </style>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/miestilo.css">
@@ -13,45 +17,54 @@
 <body>
 <div class="container-fluid p-0">
     <header class="pe-2">
-        <nav class="navbar navbar-expand-lg navbar-dark ">
-            <div class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img src="img/logo.png" alt="logo"></a></div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
+        <nav id="navegacion" class="navbar navbar-expand-lg navbar-dark ">
+            <span id="logo" class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img
+                    src="img/logo.png" alt="logo"></a></span>
+            <span id="titulo"><h1>Nihon-GO</h1></span>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
+                    <li id="inicio" class="nav-item header active">
                         <a class="nav-link" href="main.html" target="_blank">Inicio</a>
                     </li>
-                    <li class="nav-item">
+                    <li id="reservas" class="nav-item header">
                         <a class="nav-link" href="reservas.html" target="_blank">Reservas</a>
                     </li>
-                    <li class="nav-item">
+                    <li id="galeria" class="nav-item header">
                         <a class="nav-link" href="galeria.html" target="_blank">Galeria</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li id="menu-desplegable" class="nav-item dropdown header">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
                             Japón
                         </a>
                         <ul class="dropdown-menu desplegable">
-                            <li><a class="dropdown-item" href="lugares.html">Lugares</a></li>
-                            <li><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li id="lugares"><a class="dropdown-item" href="lugares.html">Lugares</a></li>
+                            <li id="que-hacer"><a class="dropdown-item" href="que-hacer.html">¿Qué hacer?</a></li>
+                            <li id="que-ver"><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li id="tienda" class="nav-item header">
                         <a class="nav-link" href="tienda.html" target="_blank">Tienda</a>
                     </li>
-                    <li class="nav-item">
+                    <li id="blog" class="nav-item header">
                         <a class="nav-link" href="blog.html" target="_blank">Blog</a>
                     </li>
-                    <li class="nav-item">
+                    <li id="contacto" class="nav-item header">
                         <a class="nav-link" href="contacto.html" target="_blank">Contacto</a>
+                    </li>
+                    <li class="nav-item header">
+                        <a class="nav-link" href="acerca.html" target="_blank">Acerca</a>
                     </li>
                     <li class="nav-item">
                         <form id="buscar" class="form-inline" action="/buscar" method="get">
                             <div class="input-group">
-                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar" name="query">
+                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar"
+                                       name="query">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                                 </div>
@@ -61,22 +74,15 @@
                 </ul>
             </div>
         </nav>
-        <div class="row">
-            <div id="titulo" class="text-start col-12 col-lg-6 ps-5"><h3>Titulo</h3></div>
-            <div id="subtitulo" class="text-end col-12 col-lg-6">
-                <p id="tag1" class="d-none d-md-block d-lg-none text-end">Subtítulo</p>
-                <p id="tag2" class="d-none d-lg-block text-end">Tag</p>
-            </div>
-        </div>
     </header>
 
     <main>
-        <div class="text-center mt-5 p-2">
+        <div class="text-center p-2">
             <h2>Amigurumi</h2>
         </div>
-        <section class="my-3 p-2">
+        <section id="tienda-1" class="tienda my-3 p-2">
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-3">
+                <div id="amigurumi1" class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img class="card-img-top" src="img/amigurumi1.jpg" alt="John Wick">
                         <div class="card-body">
@@ -86,7 +92,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
+                <div id="amigurumi2" class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img class="card-img-top" src="img/amigurumi2.jpg" alt="Capitán América">
                         <div class="card-body">
@@ -96,7 +102,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
+                <div id="amigurumi3" class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img class="card-img-top" src="img/amigurumi3.jpg" alt="Jon Snow">
                         <div class="card-body">
@@ -106,7 +112,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
+                <div id="amigurumi4" class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img class="card-img-top" src="img/amigurumi4.jpg" alt="Luffy">
                         <div class="card-body">
@@ -121,9 +127,9 @@
         </section>
 
 
-        <section class="my-3 p-2">
+        <section id="tiendas-2" class="tienda my-3 p-2">
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-3">
+                <div id="amigurumi5" class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img class="card-img-top" src="img/amigurumi5.jpg" alt="Jack Sparrow">
                         <div class="card-body">
@@ -133,7 +139,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
+                <div id="amigurumi6" class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img class="card-img-top" src="img/amigurumi6.jpg" alt="Wonder Woman">
                         <div class="card-body">
@@ -143,7 +149,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
+                <div id="amigurumi7" class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img class="card-img-top" src="img/amigurumi7.jpg" alt="Harley Quinn">
                         <div class="card-body">
@@ -153,7 +159,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
+                <div id="amigurumi8" class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img class="card-img-top" src="img/amigurumi8.jpg" alt="Darth Vader">
                         <div class="card-body">
@@ -167,9 +173,9 @@
             </div>
         </section>
 
-        <section class="my-3 p-2">
+        <section id="tienda-3" class="tienda my-3 p-2">
             <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-3">
+                <div id="amigurumi9" class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img class="card-img-top" src="img/amigurumi9.jpg" alt="Batman">
                         <div class="card-body">
@@ -179,7 +185,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
+                <div id="amigurumi10" class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img class="card-img-top" src="img/amigurumi10.jpg" alt="Wolverine">
                         <div class="card-body">
@@ -189,7 +195,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
+                <div id="amigurumi11" class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img class="card-img-top" src="img/amigurumi11.jpg" alt="Groot">
                         <div class="card-body">
@@ -199,7 +205,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-6 col-lg-3">
+                <div id="amigurumi12" class="col-sm-12 col-md-6 col-lg-3">
                     <div class="card h-100">
                         <img class="card-img-top" src="img/amigurumi12.jpg" alt="Iron Man">
                         <div class="card-body">
@@ -211,19 +217,14 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-
-
-
-
     </main>
 
     <footer class="text-center">
-        <p><span class="d-none d-lg-inline">Teléfono: <a href="tel:123456789">123-456-789</a> |</span> <span class="d-none d-md-inline">Correo: <a href="mailto:info@dominio.com">info@dominio.com</a></span></p>
-        <p class="d-none d-lg-block">Dirección</p>
-        <p>&copy2024 Dominio. Todos los derechos reservados.</p>
+        <p><span class="d-none d-lg-inline">Teléfono: <a href="tel:123456789">123-456-789</a> |</span> <span
+                class="d-none d-md-inline">Correo: <a href="mailto:info@dominio.com">info@nihongo.com</a></span></p>
+        <p>&copy2024 Viajes Turísticos Nihon-GO. Todos los derechos reservados.</p>
     </footer>
 
 </div>

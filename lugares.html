@@ -1,217 +1,318 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
-  <meta name="description" content="descripción">
-  <meta name="keywords" content="keywords">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="css/miestilo.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Viajes Nihon-GO</title>
+    <meta name="description" content="Viajes turísticos Nihongo, conoce Japón en español">
+    <meta name="keywords" content="Japón, Nihon, viajes, turismo, español, japonés, vacaciones, vuelos, blog">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+    </style>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/miestilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="container-fluid p-0">
-  <header class="pe-2">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img src="img/logo.png" alt="logo"></a></div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="main.html" target="_blank">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reservas.html" target="_blank">Reservas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="galeria.html" target="_blank">Galeria</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Japón
-            </a>
-            <ul class="dropdown-menu desplegable">
-              <li><a class="dropdown-item" href="lugares.html">Lugares</a></li>
-              <li><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="tienda.html" target="_blank">Tienda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="blog.html" target="_blank">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.html" target="_blank">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <form id="buscar" class="form-inline" action="/buscar" method="get">
-              <div class="input-group">
-                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar" name="query">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </div>
-              </div>
-            </form>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="row">
-      <div id="titulo" class="text-start col-12 col-lg-6 ps-5"><h3>Titulo</h3></div>
-      <div id="subtitulo" class="text-end col-12 col-lg-6">
-        <p id="tag1" class="d-none d-md-block d-lg-none text-end">Subtítulo</p>
-        <p id="tag2" class="d-none d-lg-block text-end">Tag</p>
-      </div>
-    </div>
-  </header>
+    <header class="pe-2">
+        <nav id="navegacion" class="navbar navbar-expand-lg navbar-dark ">
+            <span id="logo" class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img
+                    src="img/logo.png" alt="logo"></a></span>
+            <span id="titulo"><h1>Nihon-GO</h1></span>
 
-  <main>
-    <section class="mt-5">
-      <div class="row">
-
-        <div class="col-12 col-md-4 mb-4">
-          <label class="tarjeta">
-            <input type="checkbox">
-            <div class="tarjeta-contenido">
-              <div class="tarjeta-frontal">
-                <img src="img/lugares1.jpg" class="card-img-top" alt="Imagen de ejemplo">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Yakushima</h5>
-                  <p class="card-text">Haz click para saber más</p>
-                </div>
-              </div>
-              <div class="tarjeta-posterior">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Yakushima</h5>
-                  <p class="card-text text-center">Haz click para volver</p>
-                </div>
-              </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li id="inicio" class="nav-item header active">
+                        <a class="nav-link" href="main.html" target="_blank">Inicio</a>
+                    </li>
+                    <li id="reservas" class="nav-item header">
+                        <a class="nav-link" href="reservas.html" target="_blank">Reservas</a>
+                    </li>
+                    <li id="galeria" class="nav-item header">
+                        <a class="nav-link" href="galeria.html" target="_blank">Galeria</a>
+                    </li>
+                    <li id="menu-desplegable" class="nav-item dropdown header">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Japón
+                        </a>
+                        <ul class="dropdown-menu desplegable">
+                            <li id="lugares"><a class="dropdown-item" href="lugares.html">Lugares</a></li>
+                            <li id="que-hacer"><a class="dropdown-item" href="que-hacer.html">¿Qué hacer?</a></li>
+                            <li id="que-ver"><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
+                        </ul>
+                    </li>
+                    <li id="tienda" class="nav-item header">
+                        <a class="nav-link" href="tienda.html" target="_blank">Tienda</a>
+                    </li>
+                    <li id="blog" class="nav-item header">
+                        <a class="nav-link" href="blog.html" target="_blank">Blog</a>
+                    </li>
+                    <li id="contacto" class="nav-item header">
+                        <a class="nav-link" href="contacto.html" target="_blank">Contacto</a>
+                    </li>
+                    <li class="nav-item header">
+                        <a class="nav-link" href="acerca.html" target="_blank">Acerca</a>
+                    </li>
+                    <li class="nav-item">
+                        <form id="buscar" class="form-inline" action="/buscar" method="get">
+                            <div class="input-group">
+                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar"
+                                       name="query">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
             </div>
-          </label>
-        </div>
+        </nav>
+    </header>
 
-        <div class="col-12 col-md-4 mb-4">
-          <label class="tarjeta">
-            <input type="checkbox">
-            <div class="tarjeta-contenido">
-              <div class="tarjeta-frontal">
-                <img src="img/lugares2.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Okinawa</h5>
-                  <p class="card-text">Haz click para saber más</p>
+    <main>
+        <section id="flipcards-1" class="flipcards mt-2">
+            <div class="row">
+
+                <div id="flip1" class="col-12 col-md-4 mb-4">
+                    <label class="tarjeta">
+                        <input type="checkbox">
+                        <div class="tarjeta-contenido">
+                            <div id="ffront1" class="tarjeta-frontal">
+                                <img src="img/lugares1.jpg" class="card-img-top" alt="Yakushima">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Yakushima</h5>
+                                    <p class="card-text">Haz click para saber más</p>
+                                </div>
+                            </div>
+                            <div id="fback1" class="tarjeta-posterior p-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Yakushima</h5>
+                                    <p class="card-text">Yakushima es una isla situada al sur de Japón, conocida por su
+                                        impresionante belleza natural y su biodiversidad única. Declarada Patrimonio de
+                                        la Humanidad por la UNESCO, la isla alberga uno de los bosques más antiguos y
+                                        prístinos del mundo, hogar de árboles milenarios como los cedros Jomon.</p>
+
+                                    <p class="card-text">El Parque Nacional de Yakushima es ideal para los amantes de la
+                                        naturaleza y el senderismo. Sus densos bosques, cascadas y montañas ofrecen
+                                        rutas que permiten explorar paisajes fascinantes, donde la vegetación tropical
+                                        se mezcla con un clima húmedo y misterioso.</p>
+
+                                    <p class="card-text">Además de su belleza natural, Yakushima es famosa por su vida
+                                        silvestre, como los ciervos y los monos, y por su flora diversa. Esta isla es un
+                                        destino perfecto para quienes buscan escapar del bullicio y sumergirse en un
+                                        entorno de calma y conexión con la naturaleza.</p>
+
+                                    <p class="card-text text-center">Haz click para volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
                 </div>
-              </div>
-              <div class="tarjeta-posterior">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Okinawa</h5>
-                  <p class="card-text text-center">Haz click para volver</p>
+
+                <div id="flip2" class="col-12 col-md-4 mb-4">
+                    <label class="tarjeta">
+                        <input type="checkbox">
+                        <div class="tarjeta-contenido">
+                            <div id="ffront2" class="tarjeta-frontal">
+                                <img src="img/lugares2.jpg" class="card-img-top" alt="Okinawa">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Okinawa</h5>
+                                    <p class="card-text">Haz click para saber más</p>
+                                </div>
+                            </div>
+                            <div id="fback2" class="tarjeta-posterior p-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Okinawa</h5>
+                                    <p class="card-text">Okinawa es un paraíso tropical situado en el sur de Japón,
+                                        conocido por sus hermosos paisajes, su rica historia y, sobre todo, sus aguas
+                                        cristalinas. Las playas de Okinawa ofrecen algunas de las vistas más
+                                        impresionantes del país, con aguas de un azul intenso que invitan a nadar y
+                                        explorar.</p>
+
+                                    <p class="card-text">Las aguas de Okinawa son perfectas para practicar actividades
+                                        acuáticas como el snorkel, el buceo y el kayak. Los arrecifes de coral y la
+                                        abundante vida marina hacen que cada inmersión sea una experiencia única y
+                                        fascinante.</p>
+
+                                    <p class="card-text">Además de sus costas paradisíacas, Okinawa ofrece una cultura
+                                        distintiva, influenciada por su pasado como reino independiente. Los turistas
+                                        pueden disfrutar de sus templos, castillos y una deliciosa gastronomía local.
+                                        Sin duda, Okinawa es un destino ideal para quienes buscan belleza natural y una
+                                        experiencia cultural enriquecedora.</p>
+
+                                    <p class="card-text text-center">Haz click para volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
                 </div>
-              </div>
+                <div id="flip3" class="col-12 col-md-4 mb-4">
+                    <label class="tarjeta">
+                        <input type="checkbox">
+                        <div class="tarjeta-contenido">
+                            <div id="ffront3" class="tarjeta-frontal">
+                                <img src="img/lugares3.jpg" class="card-img-top" alt="Tokio">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Tokio</h5>
+                                    <p class="card-text">Haz click para saber más</p>
+                                </div>
+                            </div>
+                            <div id="fback3" class="tarjeta-posterior p-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Tokio</h5>
+                                    <p class="card-text">Tokio, la capital de Japón, es una de las ciudades más
+                                        dinámicas y fascinantes del mundo. Con una mezcla de tradición y modernidad,
+                                        Tokio ofrece una experiencia única, desde sus templos históricos hasta sus
+                                        rascacielos futuristas.</p>
+
+                                    <p class="card-text">En Tokio, se pueden explorar barrios vibrantes como Shibuya y
+                                        Shinjuku, conocidos por su vida nocturna, tiendas de moda y una energía
+                                        constante. Al mismo tiempo, se puede disfrutar de la tranquilidad de lugares
+                                        como el templo Senso-ji o los jardines del Palacio Imperial.</p>
+
+                                    <p class="card-text">La ciudad también es un paraíso para los amantes de la
+                                        gastronomía, con una gran variedad de restaurantes que ofrecen desde sushi
+                                        tradicional hasta innovadoras creaciones culinarias. Tokio es, sin duda, una
+                                        ciudad que nunca deja de sorprender a quienes la visitan.</p>
+
+                                    <p class="card-text text-center">Haz click para volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
             </div>
-          </label>
-        </div>
-        <div class="col-12 col-md-4 mb-4">
-          <label class="tarjeta">
-            <input type="checkbox">
-            <div class="tarjeta-contenido">
-              <div class="tarjeta-frontal">
-                <img src="img/lugares3.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Tokio</h5>
-                  <p class="card-text">Haz click para saber más</p>
+        </section>
+
+        <section id="flipcards-2" class="mt-2">
+            <div class="row">
+
+                <div id="flip4" class="col-12 col-md-4 mb-4">
+                    <label class="tarjeta">
+                        <input type="checkbox">
+                        <div class="tarjeta-contenido">
+                            <div id="ffront4" class="tarjeta-frontal">
+                                <img src="img/lugares4.jpg" class="card-img-top" alt="Izu">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Izu</h5>
+                                    <p class="card-text">Haz click para saber más</p>
+                                </div>
+                            </div>
+                            <div id="fback4" class="tarjeta-posterior p-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Izu</h5>
+                                    <p class="card-text">Izu es una península ubicada al suroeste de Tokio, famosa por
+                                        sus paisajes costeros, aguas termales y naturaleza exuberante. Es un destino
+                                        popular tanto para turistas locales como internacionales, buscando escapar del
+                                        bullicio de la ciudad.</p>
+
+                                    <p class="card-text">Las playas de Izu ofrecen un refugio perfecto para los amantes
+                                        del mar, con aguas claras ideales para nadar, hacer snorkel y practicar deportes
+                                        acuáticos. Además, la región cuenta con varios parques nacionales donde se
+                                        pueden realizar caminatas y explorar bosques y montañas.</p>
+
+                                    <p class="card-text">Izu también es famosa por sus onsen, los baños termales
+                                        japoneses, que brindan una experiencia de relajación única en un entorno
+                                        natural. Esta combinación de belleza natural, cultura tradicional y actividades
+                                        al aire libre hace de Izu un lugar perfecto para desconectar y disfrutar de la
+                                        tranquilidad japonesa.</p>
+
+                                    <p class="card-text text-center">Haz click para volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
                 </div>
-              </div>
-              <div class="tarjeta-posterior">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Tokio</h5>
-                  <p class="card-text text-center">Haz click para volver</p>
+
+                <div id="flip5" class="col-12 col-md-4 mb-4">
+                    <label class="tarjeta">
+                        <input type="checkbox">
+                        <div class="tarjeta-contenido">
+                            <div id="ffront5" class="tarjeta-frontal">
+                                <img src="img/lugares5.jpg" class="card-img-top" alt="Santuario Itsukushima">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Santuario Itsukushima</h5>
+                                    <p class="card-text">Haz click para saber más</p>
+                                </div>
+                            </div>
+                            <div id="fback5" class="tarjeta-posterior p-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Santuario Itsukushima</h5>
+                                    <p class="card-text">El Santuario de Itsukushima, ubicado en la isla de Miyajima, es
+                                        uno de los lugares más emblemáticos de Japón. Este santuario sintoísta, famoso
+                                        por su impresionante puerta torii flotante, está declarado Patrimonio de la
+                                        Humanidad por la UNESCO.</p>
+
+                                    <p class="card-text">La estructura del santuario está construida sobre el agua, lo
+                                        que le da una apariencia surrealista cuando la marea sube. Durante la marea
+                                        baja, la puerta torii se puede ver de cerca, ofreciendo una vista espectacular
+                                        del mar y las montañas que rodean la isla.</p>
+
+                                    <p class="card-text">Además de su belleza arquitectónica, el santuario es un
+                                        importante lugar de peregrinaje y espiritualidad. Los visitantes pueden caminar
+                                        por sus pasillos cubiertos de madera, disfrutar de la paz del entorno natural y
+                                        participar en los rituales sintoístas tradicionales.</p>
+
+                                    <p class="card-text text-center">Haz click para volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
                 </div>
-              </div>
+                <div id="flip6" class="col-12 col-md-4 mb-4">
+                    <label class="tarjeta">
+                        <input type="checkbox">
+                        <div class="tarjeta-contenido">
+                            <div id="ffront6" class="tarjeta-frontal">
+                                <img src="img/lugares6.jpg" class="card-img-top" alt="Alpes japoneses">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Alpes japoneses</h5>
+                                    <p class="card-text">Haz click para saber más</p>
+                                </div>
+                            </div>
+                            <div id="fback6" class="tarjeta-posterior p-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Alpes japoneses</h5>
+                                    <p class="card-text">Los Alpes Japoneses son una impresionante cadena montañosa
+                                        ubicada en el centro de Japón, conocida por sus paisajes dramáticos, montañas
+                                        nevadas y pintorescos valles. Divididos en tres áreas principales: los Alpes del
+                                        Norte, del Sur y del Centro, esta región es un destino popular para los amantes
+                                        del senderismo y las actividades al aire libre.</p>
+
+                                    <p class="card-text">Durante el verano, los Alpes Japoneses ofrecen rutas de
+                                        senderismo que permiten a los visitantes explorar sus cumbres, lagos alpinos y
+                                        bosques densos. En invierno, la zona se convierte en un paraíso para los
+                                        esquiadores y snowboarders, con estaciones de esquí que atraen a turistas de
+                                        todo el mundo.</p>
+
+                                    <p class="card-text">Además de su belleza natural, los Alpes Japoneses son hogar de
+                                        pueblos tradicionales, fuentes termales y una gran diversidad de flora y fauna.
+                                        Es un lugar perfecto para aquellos que buscan escapar de la vida urbana y
+                                        disfrutar de la tranquilidad de la naturaleza japonesa.</p>
+
+                                    <p class="card-text text-center">Haz click para volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
             </div>
-          </label>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="mt-5">
-      <div class="row">
+    </main>
 
-        <div class="col-12 col-md-4 mb-4">
-          <label class="tarjeta">
-            <input type="checkbox">
-            <div class="tarjeta-contenido">
-              <div class="tarjeta-frontal">
-                <img src="img/lugares4.jpg" class="card-img-top" alt="Imagen de ejemplo">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Izu</h5>
-                  <p class="card-text">Haz click para saber más</p>
-                </div>
-              </div>
-              <div class="tarjeta-posterior">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Izu</h5>
-                  <p class="card-text text-center">Haz click para volver</p>
-                </div>
-              </div>
-            </div>
-          </label>
-        </div>
-
-        <div class="col-12 col-md-4 mb-4">
-          <label class="tarjeta">
-            <input type="checkbox">
-            <div class="tarjeta-contenido">
-              <div class="tarjeta-frontal">
-                <img src="img/lugares5.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Santuario Itsukushima</h5>
-                  <p class="card-text">Haz click para saber más</p>
-                </div>
-              </div>
-              <div class="tarjeta-posterior">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Santuario Itsukushima</h5>
-                  <p class="card-text text-center">Haz click para volver</p>
-                </div>
-              </div>
-            </div>
-          </label>
-        </div>
-        <div class="col-12 col-md-4 mb-4">
-          <label class="tarjeta">
-            <input type="checkbox">
-            <div class="tarjeta-contenido">
-              <div class="tarjeta-frontal">
-                <img src="img/lugares6.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Alpes japoneses</h5>
-                  <p class="card-text">Haz click para saber más</p>
-                </div>
-              </div>
-              <div class="tarjeta-posterior">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Alpes japoneses</h5>
-                  <p class="card-text text-center">Haz click para volver</p>
-                </div>
-              </div>
-            </div>
-          </label>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="text-center">
-    <p><span class="d-none d-lg-inline">Teléfono: <a href="tel:123456789">123-456-789</a> |</span> <span class="d-none d-md-inline">Correo: <a href="mailto:info@dominio.com">info@dominio.com</a></span></p>
-    <p class="d-none d-lg-block">Dirección</p>
-    <p>&copy2024 Dominio. Todos los derechos reservados.</p>
-  </footer>
+    <footer class="text-center">
+        <p><span class="d-none d-lg-inline">Teléfono: <a href="tel:123456789">123-456-789</a> |</span> <span
+                class="d-none d-md-inline">Correo: <a href="mailto:info@dominio.com">info@nihongo.com</a></span></p>
+        <p>&copy2024 Viajes Turísticos Nihon-GO. Todos los derechos reservados.</p>
+    </footer>
 
 </div>
 <script src="js/bootstrap.bundle.min.js"></script>

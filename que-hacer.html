@@ -1,217 +1,337 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title></title>
-  <meta name="description" content="descripción">
-  <meta name="keywords" content="keywords">
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="css/miestilo.css">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Viajes Nihon-GO</title>
+    <meta name="description" content="Viajes turísticos Nihongo, conoce Japón en español">
+    <meta name="keywords" content="Japón, Nihon, viajes, turismo, español, japonés, vacaciones, vuelos, blog">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+    </style>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="css/miestilo.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
 <div class="container-fluid p-0">
-  <header class="pe-2">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
-      <div class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img src="img/logo.png" alt="logo"></a></div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="main.html" target="_blank">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="reservas.html" target="_blank">Reservas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="galeria.html" target="_blank">Galeria</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Japón
-            </a>
-            <ul class="dropdown-menu desplegable">
-              <li><a class="dropdown-item" href="lugares.html">Lugares</a></li>
-              <li><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
-              <li><a class="dropdown-item" href="que-hacer.html">¿Qué hacer?</a></li>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="tienda.html" target="_blank">Tienda</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="blog.html" target="_blank">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="contacto.html" target="_blank">Contacto</a>
-          </li>
-          <li class="nav-item">
-            <form id="buscar" class="form-inline" action="/buscar" method="get">
-              <div class="input-group">
-                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar" name="query">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-success" type="submit">Buscar</button>
-                </div>
-              </div>
-            </form>
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <div class="row">
-      <div id="titulo" class="text-start col-12 col-lg-6 ps-5"><h3>Titulo</h3></div>
-      <div id="subtitulo" class="text-end col-12 col-lg-6">
-        <p id="tag1" class="d-none d-md-block d-lg-none text-end">Subtítulo</p>
-        <p id="tag2" class="d-none d-lg-block text-end">Tag</p>
-      </div>
-    </div>
-  </header>
+    <header class="pe-2">
+        <nav id="navegacion" class="navbar navbar-expand-lg navbar-dark ">
+            <span id="logo" class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img
+                    src="img/logo.png" alt="logo"></a></span>
+            <span id="titulo"><h1>Nihon-GO</h1></span>
 
-  <main>
-    <section class="mt-5">
-      <div class="row">
-
-        <div class="col-12 col-md-4 mb-4">
-          <label class="tarjeta">
-            <input type="checkbox">
-            <div class="tarjeta-contenido">
-              <div class="tarjeta-frontal">
-                <img src="img/que-hacer1.jpg" class="card-img-top" alt="Imagen de ejemplo">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Título de la Tarjeta 1</h5>
-                  <p class="card-text">Haz click para saber más</p>
-                </div>
-              </div>
-              <div class="tarjeta-posterior">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Contenido Alternativo</h5>
-                  <p class="card-text text-center">Haz click para volver</p>
-                </div>
-              </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li id="inicio" class="nav-item header active">
+                        <a class="nav-link" href="main.html" target="_blank">Inicio</a>
+                    </li>
+                    <li id="reservas" class="nav-item header">
+                        <a class="nav-link" href="reservas.html" target="_blank">Reservas</a>
+                    </li>
+                    <li id="galeria" class="nav-item header">
+                        <a class="nav-link" href="galeria.html" target="_blank">Galeria</a>
+                    </li>
+                    <li id="menu-desplegable" class="nav-item dropdown header">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
+                            Japón
+                        </a>
+                        <ul class="dropdown-menu desplegable">
+                            <li id="lugares"><a class="dropdown-item" href="lugares.html">Lugares</a></li>
+                            <li id="que-hacer"><a class="dropdown-item" href="que-hacer.html">¿Qué hacer?</a></li>
+                            <li id="que-ver"><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
+                        </ul>
+                    </li>
+                    <li id="tienda" class="nav-item header">
+                        <a class="nav-link" href="tienda.html" target="_blank">Tienda</a>
+                    </li>
+                    <li id="blog" class="nav-item header">
+                        <a class="nav-link" href="blog.html" target="_blank">Blog</a>
+                    </li>
+                    <li id="contacto" class="nav-item header">
+                        <a class="nav-link" href="contacto.html" target="_blank">Contacto</a>
+                    </li>
+                    <li class="nav-item header">
+                        <a class="nav-link" href="acerca.html" target="_blank">Acerca</a>
+                    </li>
+                    <li class="nav-item">
+                        <form id="buscar" class="form-inline" action="/buscar" method="get">
+                            <div class="input-group">
+                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar"
+                                       name="query">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-success" type="submit">Buscar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </li>
+                </ul>
             </div>
-          </label>
-        </div>
+        </nav>
+    </header>
 
-        <div class="col-12 col-md-4 mb-4">
-          <label class="tarjeta">
-            <input type="checkbox">
-            <div class="tarjeta-contenido">
-              <div class="tarjeta-frontal">
-                <img src="img/que-hacer2.png" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Título de la Tarjeta 1</h5>
-                  <p class="card-text">Haz click para saber más</p>
+    <main>
+        <section id="flipcards-1" class="flipcards mt-2">
+            <div class="row">
+
+                <div id="flip1" class="col-12 col-md-4 mb-4">
+                    <label class="tarjeta">
+                        <input type="checkbox">
+                        <div class="tarjeta-contenido">
+                            <div id="ffront1" class="tarjeta-frontal">
+                                <img src="img/que-hacer1.jpg" class="card-img-top" alt="Camino de Shikoku">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">El camino de Shikoku</h5>
+                                    <p class="card-text">Haz click para saber más</p>
+                                </div>
+                            </div>
+                            <div id="fback1" class="tarjeta-posterior p-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">El camino de Shikoku</h5>
+                                    <p class="card-text">
+                                        El Camino de Shikoku es una famosa ruta de peregrinaje en Japón, que conecta 88
+                                        templos budistas en la isla de Shikoku. Este recorrido, de aproximadamente 1.200
+                                        kilómetros, tiene más de mil años de tradición y es uno de los más importantes
+                                        del país. Los peregrinos, conocidos como "henro", visten ropa blanca y un
+                                        sombrero con campanillas, símbolos de humildad y devoción.</p>
+
+                                    <p class="card-text">Cada templo está dedicado a uno de los discípulos del monje
+                                        Kobo Daishi, quien fundó la escuela Shingon del budismo. La ruta lleva a los
+                                        peregrinos a través de paisajes montañosos, bosques y pueblos tranquilos,
+                                        brindando una oportunidad para la reflexión personal y el autoconocimiento.</p>
+
+                                    <p class="card-text">Más allá de lo físico, el peregrinaje es una experiencia
+                                        espiritual profunda. A lo largo del camino, los peregrinos buscan la paz
+                                        interior y el crecimiento personal. Hoy, el Camino de Shikoku sigue siendo un
+                                        importante centro de espiritualidad, atrayendo a personas de todo el mundo.</p>
+
+                                    <p class="card-text text-center">Haz click para volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
                 </div>
-              </div>
-              <div class="tarjeta-posterior">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Contenido Alternativo</h5>
-                  <p class="card-text text-center">Haz click para volver</p>
+
+                <div id="flip2" class="col-12 col-md-4 mb-4">
+                    <label class="tarjeta">
+                        <input type="checkbox">
+                        <div class="tarjeta-contenido">
+                            <div id="ffront2" class="tarjeta-frontal">
+                                <img src="img/que-hacer2.png" class="card-img-top" alt="ceremonia del té">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Ceremonia del té</h5>
+                                    <p class="card-text">Haz click para saber más</p>
+                                </div>
+                            </div>
+                            <div id="fback2" class="tarjeta-posterior p-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Ceremonia del té</h5>
+                                    <p class="card-text">
+                                        La ceremonia del té japonesa, conocida como "chanoyu", es una tradición
+                                        profundamente arraigada en la cultura de Japón. Esta ceremonia se centra en la
+                                        preparación y el consumo del té matcha, un té verde en polvo, y está marcada por
+                                        un ritual de precisión y armonía. Cada gesto, desde la limpieza de los
+                                        utensilios hasta el momento en que se sirve el té, tiene un significado
+                                        simbólico.</p>
+                                    <p class="card-text">La ceremonia se basa en principios como la armonía, el respeto,
+                                        la pureza y la tranquilidad, conocidos como los "cuatro principios de la
+                                        ceremonia del té". Los participantes se enfocan en el presente, buscando la paz
+                                        mental a través de la sencillez y la meditación en los detalles.</p>
+                                    <p class="card-text">Aunque existen varias formas de la ceremonia, todas comparten
+                                        un enfoque en la estética y la conexión con la naturaleza. La ceremonia del té
+                                        no solo es un acto de beber té, sino una experiencia espiritual que promueve la
+                                        reflexión y la calma.</p>
+                                    <p class="card-text text-center">Haz click para volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
                 </div>
-              </div>
+                <div id="flip3" class="col-12 col-md-4 mb-4">
+                    <label class="tarjeta">
+                        <input type="checkbox">
+                        <div class="tarjeta-contenido">
+                            <div id="ffront3" class="tarjeta-frontal">
+                                <img src="img/que-hacer3.png" class="card-img-top" alt="Shinkansen">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Shinkansen</h5>
+                                    <p class="card-text">Haz click para saber más</p>
+                                </div>
+                            </div>
+                            <div id="fback3" class="tarjeta-posterior p-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Shinkansen</h5>
+                                    <p class="card-text">El Shinkansen, conocido como el tren bala, es uno de los
+                                        sistemas de transporte más avanzados del mundo. Iniciado en 1964, conecta las
+                                        principales ciudades de Japón con alta velocidad, lo que permite a los viajeros
+                                        recorrer largas distancias en pocas horas.</p>
+
+                                    <p class="card-text">El Shinkansen es famoso por su puntualidad, seguridad y
+                                        confort. Los trenes viajan a velocidades superiores a los 300 km/h, mientras
+                                        mantienen un alto nivel de comodidad para los pasajeros, con asientos espaciosos
+                                        y servicios a bordo.</p>
+
+                                    <p class="card-text">Además de su eficiencia, el Shinkansen está diseñado con una
+                                        infraestructura moderna y aerodinámica que minimiza el impacto ambiental.
+                                        Conectando ciudades como Tokio, Osaka y Kyoto, el Shinkansen es una de las
+                                        formas más rápidas y cómodas de viajar por Japón.</p>
+
+
+                                    <p class="card-text text-center">Haz click para volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
             </div>
-          </label>
-        </div>
-        <div class="col-12 col-md-4 mb-4">
-          <label class="tarjeta">
-            <input type="checkbox">
-            <div class="tarjeta-contenido">
-              <div class="tarjeta-frontal">
-                <img src="img/que-hacer3.png" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Título de la Tarjeta 1</h5>
-                  <p class="card-text">Haz click para saber más</p>
+        </section>
+
+        <section id="flipcards-2" class=" flipcards mt-2">
+            <div class="row">
+
+                <div id="flip4" class="col-12 col-md-4 mb-4">
+                    <label class="tarjeta">
+                        <input type="checkbox">
+                        <div class="tarjeta-contenido">
+                            <div id="ffront4" class="tarjeta-frontal">
+                                <img src="img/que-hacer4.jpg" class="card-img-top" alt="Onsen">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Onsen</h5>
+                                    <p class="card-text">Haz click para saber más</p>
+                                </div>
+                            </div>
+                            <div id="fback4" class="tarjeta-posterior p-3">
+                                <div class="card-body ">
+                                    <h5 class="card-title text-center">Onsen</h5>
+                                    <p class="card-text">Los onsen son baños termales japoneses, conocidos por sus
+                                        propiedades relajantes y terapéuticas. Estos baños se encuentran en zonas con
+                                        actividad geotérmica, como montañas o áreas volcánicas, donde el agua caliente
+                                        brota naturalmente del subsuelo.</p>
+
+                                    <p class="card-text">En Japón, los onsen son considerados una experiencia
+                                        tradicional que va más allá
+                                        del simple baño. Los visitantes disfrutan no solo de los beneficios físicos del
+                                        agua rica en minerales, sino también del ambiente tranquilo y sereno que los
+                                        rodea. Muchos onsen están situados en hermosos paisajes naturales, lo que
+                                        potencia la sensación de conexión con la naturaleza.</p>
+
+                                    <p class="card-text">Existen diferentes tipos de onsen, como los de agua sulfurosa,
+                                        salina o alcalina,
+                                        cada uno con propiedades beneficiosas para la salud. La etiqueta en los onsen es
+                                        muy importante: antes de sumergirse en las aguas, se debe limpiar el cuerpo
+                                        cuidadosamente en duchas públicas.</p>
+
+                                    <p class="card-text">Hoy en día, los onsen siguen siendo una parte esencial de la
+                                        cultura japonesa,
+                                        siendo visitados tanto por locales como por turistas en busca de relajación y
+                                        bienestar.</p>
+
+                                    <p class="card-text text-center">Haz click para volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
                 </div>
-              </div>
-              <div class="tarjeta-posterior">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Contenido Alternativo</h5>
-                  <p class="card-text text-center">Haz click para volver</p>
+
+                <div id="flip5" class="col-12 col-md-4 mb-4">
+                    <label class="tarjeta">
+                        <input type="checkbox">
+                        <div class="tarjeta-contenido">
+                            <div id="ffront5" class="tarjeta-frontal">
+                                <img src="img/que-hacer5.jpg" class="card-img-top" alt="Ryokan">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Ryokan</h5>
+                                    <p class="card-text">Haz click para saber más</p>
+                                </div>
+                            </div>
+                            <div id="fback5" class="tarjeta-posterior p-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Ryokan</h5>
+                                    <p class="card-text">Los ryokan son tradicionales posadas japonesas que ofrecen una
+                                        experiencia única de hospitalidad. Estos alojamientos, a menudo ubicados en
+                                        zonas rurales o cerca de fuentes termales, están diseñados para reflejar la
+                                        estética y tranquilidad de la cultura japonesa.</p>
+
+                                    <p class="card-text">Las habitaciones de un ryokan suelen contar con tatamis en el
+                                        suelo y puertas
+                                        corredizas de papel, creando un ambiente minimalista y sereno. Los huéspedes
+                                        duermen en futones, que se colocan sobre el tatami por la noche. Además, los
+                                        ryokan suelen ofrecer cenas y desayunos tradicionales, que incluyen platos
+                                        típicos como el sushi, sashimi y el "kaiseki", un menú de varios platos que
+                                        destaca lo mejor de la cocina japonesa.</p>
+
+                                    <p class="card-text">Muchos ryokan también cuentan con onsen, los baños termales
+                                        japoneses, lo que
+                                        brinda a los visitantes la oportunidad de relajarse en aguas minerales
+                                        naturales. Esta experiencia, combinada con la hospitalidad y la calma del
+                                        entorno, convierte al ryokan en una opción única para quienes desean sumergirse
+                                        en la cultura japonesa.</p>
+
+                                    <p class="card-text text-center">Haz click para volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
                 </div>
-              </div>
+                <div id="flip6" class="col-12 col-md-4 mb-4">
+                    <label class="tarjeta">
+                        <input type="checkbox">
+                        <div class="tarjeta-contenido">
+                            <div id="ffront6" class="tarjeta-frontal">
+                                <img src="img/que-hacer6.jpg" class="card-img-top" alt="Kyūdō">
+                                <div class="card-body text-center">
+                                    <h5 class="card-title">Kyūdō</h5>
+                                    <p class="card-text">Haz click para saber más</p>
+                                </div>
+                            </div>
+                            <div id="fback6" class="tarjeta-posterior p-3">
+                                <div class="card-body">
+                                    <h5 class="card-title text-center">Kyūdō</h5>
+                                    <p class="card-text">El Kyūdō es el arte tradicional japonés del tiro con arco, una
+                                        disciplina que combina la precisión física con la meditación y el
+                                        autoconocimiento. Su práctica se remonta a siglos atrás, y a lo largo de la
+                                        historia se ha vinculado tanto a la guerra como a la filosofía Zen.</p>
+
+                                    <p class="card-text">En el Kyūdō, el objetivo no solo es acertar en el blanco, sino
+                                        alcanzar una
+                                        perfección en la forma y el espíritu. Los arqueros siguen una serie de
+                                        movimientos ritualizados, desde el "taihai" (la postura inicial) hasta el
+                                        "hassetsu" (el proceso de disparo), con un enfoque en la concentración y la
+                                        armonía interna.</p>
+
+                                    <p class="card-text">El equipo utilizado en Kyūdō incluye un arco largo y flechas
+                                        especiales. La
+                                        práctica del tiro con arco japonés no se limita a la técnica, sino que se enfoca
+                                        en la superación personal, buscando un equilibrio entre el cuerpo y la
+                                        mente.</p>
+
+                                    <p class="card-text">Hoy en día, el Kyūdō sigue siendo una disciplina popular en
+                                        Japón, tanto en
+                                        escuelas como en competiciones, manteniendo viva una tradición que busca la
+                                        perfección en cada flecha disparada.</p>
+
+                                    <p class="card-text text-center">Haz click para volver</p>
+                                </div>
+                            </div>
+                        </div>
+                    </label>
+                </div>
             </div>
-          </label>
-        </div>
-      </div>
-    </section>
+        </section>
 
-    <section class="mt-5">
-      <div class="row">
+    </main>
 
-        <div class="col-12 col-md-4 mb-4">
-          <label class="tarjeta">
-            <input type="checkbox">
-            <div class="tarjeta-contenido">
-              <div class="tarjeta-frontal">
-                <img src="img/que-hacer4.jpg" class="card-img-top" alt="Imagen de ejemplo">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Título de la Tarjeta 1</h5>
-                  <p class="card-text">Haz click para saber más</p>
-                </div>
-              </div>
-              <div class="tarjeta-posterior">
-                <div class="card-body ">
-                  <h5 class="card-title text-center">Contenido Alternativo</h5>
-                  <p class="card-text text-center">Haz click para volver</p>
-                </div>
-              </div>
-            </div>
-          </label>
-        </div>
-
-        <div class="col-12 col-md-4 mb-4">
-          <label class="tarjeta">
-            <input type="checkbox">
-            <div class="tarjeta-contenido">
-              <div class="tarjeta-frontal">
-                <img src="img/que-hacer5.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Título de la Tarjeta 1</h5>
-                  <p class="card-text">Haz click para saber más</p>
-                </div>
-              </div>
-              <div class="tarjeta-posterior">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Contenido Alternativo</h5>
-                  <p class="card-text text-center">Haz click para volver</p>
-                </div>
-              </div>
-            </div>
-          </label>
-        </div>
-        <div class="col-12 col-md-4 mb-4">
-          <label class="tarjeta">
-            <input type="checkbox">
-            <div class="tarjeta-contenido">
-              <div class="tarjeta-frontal">
-                <img src="img/que-hacer6.jpg" class="card-img-top" alt="...">
-                <div class="card-body text-center">
-                  <h5 class="card-title">Título de la Tarjeta 1</h5>
-                  <p class="card-text">Haz click para saber más</p>
-                </div>
-              </div>
-              <div class="tarjeta-posterior">
-                <div class="card-body">
-                  <h5 class="card-title text-center">Contenido Alternativo</h5>
-                  <p class="card-text text-center">Haz click para volver</p>
-                </div>
-              </div>
-            </div>
-          </label>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="text-center">
-    <p><span class="d-none d-lg-inline">Teléfono: <a href="tel:123456789">123-456-789</a> |</span> <span class="d-none d-md-inline">Correo: <a href="mailto:info@dominio.com">info@dominio.com</a></span></p>
-    <p class="d-none d-lg-block">Dirección</p>
-    <p>&copy2024 Dominio. Todos los derechos reservados.</p>
-  </footer>
+    <footer class="text-center">
+        <p><span class="d-none d-lg-inline">Teléfono: <a href="tel:123456789">123-456-789</a> |</span> <span
+                class="d-none d-md-inline">Correo: <a href="mailto:info@dominio.com">info@nihongo.com</a></span></p>
+        <p>&copy2024 Viajes Turísticos Nihon-GO. Todos los derechos reservados.</p>
+    </footer>
 
 </div>
 <script src="js/bootstrap.bundle.min.js"></script>

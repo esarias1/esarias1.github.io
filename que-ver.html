@@ -2,9 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <meta name="description" content="descripción">
-    <meta name="keywords" content="keywords">
+    <title>Viajes Nihon-GO</title>
+    <meta name="description" content="Viajes turísticos Nihongo, conoce Japón en español">
+    <meta name="keywords" content="Japón, Nihon, viajes, turismo, español, japonés, vacaciones, vuelos, blog">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+    </style>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/miestilo.css">
@@ -13,45 +17,54 @@
 <body>
 <div class="container-fluid p-0">
     <header class="pe-2">
-        <nav class="navbar navbar-expand-lg navbar-dark ">
-            <div class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img src="img/logo.png" alt="logo"></a></div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
+        <nav id="navegacion" class="navbar navbar-expand-lg navbar-dark ">
+            <span id="logo" class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img
+                    src="img/logo.png" alt="logo"></a></span>
+            <span id="titulo"><h1>Nihon-GO</h1></span>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
+                    <li id="inicio" class="nav-item header active">
                         <a class="nav-link" href="main.html" target="_blank">Inicio</a>
                     </li>
-                    <li class="nav-item">
+                    <li id="reservas" class="nav-item header">
                         <a class="nav-link" href="reservas.html" target="_blank">Reservas</a>
                     </li>
-                    <li class="nav-item">
+                    <li id="galeria" class="nav-item header">
                         <a class="nav-link" href="galeria.html" target="_blank">Galeria</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li id="menu-desplegable" class="nav-item dropdown header">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
                             Japón
                         </a>
                         <ul class="dropdown-menu desplegable">
-                            <li><a class="dropdown-item" href="lugares.html">Lugares</a></li>
-                            <li><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li id="lugares"><a class="dropdown-item" href="lugares.html">Lugares</a></li>
+                            <li id="que-hacer"><a class="dropdown-item" href="que-hacer.html">¿Qué hacer?</a></li>
+                            <li id="que-ver"><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li id="tienda" class="nav-item header">
                         <a class="nav-link" href="tienda.html" target="_blank">Tienda</a>
                     </li>
-                    <li class="nav-item">
+                    <li id="blog" class="nav-item header">
                         <a class="nav-link" href="blog.html" target="_blank">Blog</a>
                     </li>
-                    <li class="nav-item">
+                    <li id="contacto" class="nav-item header">
                         <a class="nav-link" href="contacto.html" target="_blank">Contacto</a>
+                    </li>
+                    <li class="nav-item header">
+                        <a class="nav-link" href="acerca.html" target="_blank">Acerca</a>
                     </li>
                     <li class="nav-item">
                         <form id="buscar" class="form-inline" action="/buscar" method="get">
                             <div class="input-group">
-                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar" name="query">
+                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar"
+                                       name="query">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                                 </div>
@@ -61,74 +74,125 @@
                 </ul>
             </div>
         </nav>
-        <div class="row">
-            <div id="titulo" class="text-start col-12 col-lg-6 ps-5"><h3>Titulo</h3></div>
-            <div id="subtitulo" class="text-end col-12 col-lg-6">
-                <p id="tag1" class="d-none d-md-block d-lg-none text-end">Subtítulo</p>
-                <p id="tag2" class="d-none d-lg-block text-end">Tag</p>
-            </div>
-        </div>
     </header>
 
     <main>
-        <section class="mt-5">
+        <section id="flipcars-1" class="flipcards mt-2">
             <div class="row">
-
-                <div class="col-12 col-md-4 mb-4">
+                <div id="flip1" class="col-12 col-md-4 mb-4">
                     <label class="tarjeta">
                         <input type="checkbox">
                         <div class="tarjeta-contenido">
-                            <div class="tarjeta-frontal">
-                                <img src="img/que-ver1.webp" class="card-img-top" alt="Imagen de ejemplo">
+                            <div id="ffront1" class="tarjeta-frontal">
+                                <img src="img/que-ver1.webp" class="card-img-top" alt="Bosque de bambú de Arashiyama">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">Título de la Tarjeta 1</h5>
+                                    <h5 class="card-title">Bosque de bambú de Arashiyama</h5>
                                     <p class="card-text">Haz click para saber más</p>
                                 </div>
                             </div>
-                            <div class="tarjeta-posterior">
+                            <div id="fback1" class="tarjeta-posterior p-3">
                                 <div class="card-body">
-                                    <h5 class="card-title text-center">Contenido Alternativo</h5>
-                                    <p class="card-tex text-centert">Haz click para volver</p>
+                                    <h5 class="card-title text-center">Bosque de bambú de Arashiyama</h5>
+                                    <p class="card-text">El bosque de bambú de Arashiyama, ubicado en Kyoto, es uno de
+                                        los destinos más impresionantes y visitados de Japón. Este extenso bosque ofrece
+                                        un paisaje sereno, donde los altos tallos de bambú se entrelazan creando un
+                                        entorno casi mágico, especialmente cuando la luz del sol atraviesa las
+                                        hojas.</p>
+
+                                    <p class="card-text">Recorrer el sendero que atraviesa el bosque permite
+                                        experimentar una sensación
+                                        única de tranquilidad y conexión con la naturaleza. El sonido del viento
+                                        moviendo los bambúes es conocido por tener un efecto calmante, lo que convierte
+                                        a este lugar en un popular destino tanto para turistas como para locales que
+                                        buscan relajarse.</p>
+
+                                    <p class="card-text">El bosque de Arashiyama está situado cerca de otros puntos
+                                        turísticos, como el
+                                        templo Tenryū-ji y el puente Togetsukyo, lo que lo convierte en una parada
+                                        obligada en un recorrido por Kyoto. Esta maravilla natural continúa siendo un
+                                        símbolo de la belleza y paz que caracteriza a Japón.</p>
+
+                                    <p class="card-tex text-center">Haz click para volver</p>
                                 </div>
                             </div>
                         </div>
                     </label>
                 </div>
 
-                <div class="col-12 col-md-4 mb-4">
+                <div id="flip2" class="col-12 col-md-4 mb-4">
                     <label class="tarjeta">
                         <input type="checkbox">
                         <div class="tarjeta-contenido">
-                            <div class="tarjeta-frontal">
-                                <img src="img/que-ver2.jpg" class="card-img-top" alt="...">
+                            <div id="ffront2" class="tarjeta-frontal">
+                                <img src="img/que-ver2.jpg" class="card-img-top" alt="Espectáculo Noh">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">Título de la Tarjeta 1</h5>
+                                    <h5 class="card-title">Espectáculos tradicionales</h5>
                                     <p class="card-text">Haz click para saber más</p>
                                 </div>
                             </div>
-                            <div class="tarjeta-posterior">
+                            <div id="fback2" class="tarjeta-posterior p-3">
                                 <div class="card-body">
-                                    <h5 class="card-title text-center">Contenido Alternativo</h5>
+                                    <h5 class="card-title text-center">Espectáculos tradicionales</h5>
+                                    <p class="card-text">Los espectáculos tradicionales japoneses son una expresión
+                                        profunda de la cultura y la historia del país. Estas manifestaciones artísticas
+                                        abarcan una amplia variedad de géneros, cada uno con sus propios rituales,
+                                        música, danza y vestimenta, que reflejan la espiritualidad y las tradiciones
+                                        japonesas.</p>
+
+                                    <p class="card-text">Entre los espectáculos más conocidos se encuentran el teatro
+                                        Noh, el Kabuki, y la
+                                        danza tradicional, cada uno con una estética única y una rica historia. El Noh
+                                        es una forma de teatro solemne y minimalista, mientras que el Kabuki es más
+                                        colorido y dramático, con movimientos enérgicos y música vibrante.</p>
+
+                                    <p class="card-text">Además de estos, el sumo, las festividades de danzas y los
+                                        festivales de fuegos
+                                        artificiales también son importantes en la tradición japonesa. Estos eventos no
+                                        solo son formas de entretenimiento, sino también de preservación de la identidad
+                                        cultural, donde se honra el pasado y se celebra la conexión con la
+                                        comunidad.</p>
+
+                                    <p class="card-text">Hoy en día, estos espectáculos siguen siendo una parte integral
+                                        de la vida
+                                        cultural de Japón, tanto en las grandes ciudades como en las zonas rurales.</p>
+
                                     <p class="card-text text-center">Haz click para volver</p>
                                 </div>
                             </div>
                         </div>
                     </label>
                 </div>
-                <div class="col-12 col-md-4 mb-4">
+                <div id="flip3" class="col-12 col-md-4 mb-4">
                     <label class="tarjeta">
                         <input type="checkbox">
                         <div class="tarjeta-contenido">
-                            <div class="tarjeta-frontal">
-                                <img src="img/que-ver3.webp" class="card-img-top" alt="...">
+                            <div id="ffront3" class="tarjeta-frontal">
+                                <img src="img/que-ver3.webp" class="card-img-top" alt="Festival de la nieve de Sapporo">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">Título de la Tarjeta 1</h5>
+                                    <h5 class="card-title">Festival de la nieve de Sapporo</h5>
                                     <p class="card-text">Haz click para saber más</p>
                                 </div>
                             </div>
-                            <div class="tarjeta-posterior">
+                            <div id="fback3" class="tarjeta-posterior p-3">
                                 <div class="card-body">
-                                    <h5 class="card-title text-center">Contenido Alternativo</h5>
+                                    <h5 class="card-title text-center">Festival de la nieve de Sapporo</h5>
+                                    <p class="card-text">El Festival de la Nieve de Sapporo es uno de los eventos más
+                                        famosos de Japón, celebrado anualmente en la ciudad de Sapporo, en la isla de
+                                        Hokkaido. Este festival, que tiene lugar en febrero, atrae a miles de turistas
+                                        de todo el mundo, quienes vienen a disfrutar de impresionantes esculturas de
+                                        nieve y hielo.</p>
+
+                                    <p class="card-text">Durante el festival, los parques y calles de Sapporo se
+                                        transforman en una galería al aire libre, con enormes esculturas de nieve que
+                                        representan desde figuras tradicionales hasta escenas de la cultura popular. Los
+                                        artistas locales y extranjeros participan en la creación de estas obras, lo que
+                                        convierte al evento en una competencia de gran prestigio.</p>
+
+                                    <p class="card-text">Además de las esculturas, el festival cuenta con actividades
+                                        como desfiles, espectáculos de luces y deportes de invierno. La atmósfera
+                                        festiva y las temperaturas frías no impiden que miles de personas disfruten de
+                                        esta celebración única, que resalta la belleza del invierno japonés.</p>
+
                                     <p class="card-text text-center">Haz click para volver</p>
                                 </div>
                             </div>
@@ -138,23 +202,40 @@
             </div>
         </section>
 
-        <section class="mt-5">
+        <section id="flipcards-2" class="flipcards mt-2">
             <div class="row">
 
-                <div class="col-12 col-md-4 mb-4">
+                <div id="flip4" class="col-12 col-md-4 mb-4">
                     <label class="tarjeta">
                         <input type="checkbox">
                         <div class="tarjeta-contenido">
-                            <div class="tarjeta-frontal">
-                                <img src="img/que-ver4.webp" class="card-img-top" alt="Imagen de ejemplo">
+                            <div id="ffront4" class="tarjeta-frontal">
+                                <img src="img/que-ver4.webp" class="card-img-top" alt="Gran Buda">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">Título de la Tarjeta 1</h5>
+                                    <h5 class="card-title">Templos y santuarios</h5>
                                     <p class="card-text">Haz click para saber más</p>
                                 </div>
                             </div>
-                            <div class="tarjeta-posterior">
+                            <div id="fback4" class="tarjeta-posterior p-3">
                                 <div class="card-body">
-                                    <h5 class="card-title text-center">Contenido Alternativo</h5>
+                                    <h5 class="card-title text-center">Templos y santuarios</h5>
+                                    <p class="card-text">Los templos y santuarios japoneses son lugares de gran
+                                        importancia espiritual y cultural en Japón. Los templos, generalmente budistas,
+                                        y los santuarios, asociados al sintoísmo, se encuentran en todo el país,
+                                        ofreciendo espacios de oración, meditación y reflexión.</p>
+
+                                    <p class="card-text">Los templos suelen estar decorados con estatuas de Buda y otros
+                                        símbolos budistas, mientras que los santuarios sintoístas están marcados por las
+                                        famosas puertas torii, que representan la entrada a un espacio sagrado. Cada uno
+                                        de estos lugares tiene su propia arquitectura y rituales, pero todos comparten
+                                        un profundo respeto por la naturaleza y la armonía.</p>
+
+                                    <p class="card-text">Además de ser lugares de culto, los templos y santuarios a
+                                        menudo se rodean de jardines tranquilos, senderos y estructuras históricas. Son
+                                        destinos importantes para turistas y peregrinos, ofreciendo no solo una
+                                        experiencia religiosa, sino también un encuentro con la belleza y la serenidad
+                                        de la cultura japonesa.</p>
+
                                     <p class="card-text text-center">Haz click para volver</p>
                                 </div>
                             </div>
@@ -162,40 +243,72 @@
                     </label>
                 </div>
 
-                <div class="col-12 col-md-4 mb-4">
+                <div id="flip5" class="col-12 col-md-4 mb-4">
                     <label class="tarjeta">
                         <input type="checkbox">
                         <div class="tarjeta-contenido">
-                            <div class="tarjeta-frontal">
-                                <img src="img/que-ver5.jpg" class="card-img-top" alt="...">
+                            <div id="ffront5" class="tarjeta-frontal">
+                                <img src="img/que-ver5.jpg" class="card-img-top" alt="Edo Wonderland">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">Título de la Tarjeta 1</h5>
+                                    <h5 class="card-title">Edo Wonderland Nikko Edomura</h5>
                                     <p class="card-text">Haz click para saber más</p>
                                 </div>
                             </div>
-                            <div class="tarjeta-posterior">
+                            <div id="fback5" class="tarjeta-posterior p-3">
                                 <div class="card-body">
-                                    <h5 class="card-title text-center">Contenido Alternativo</h5>
+                                    <h5 class="card-title text-center">Edo Wonderland Nikko Edomura</h5>
+                                    <p class="card-text">Edo Wonderland es un parque temático ubicado en Nikko, Japón,
+                                        que transporta a los visitantes al periodo Edo (1603-1868). Este parque recrea
+                                        una aldea japonesa tradicional, con edificios, calles y ambientes que evocan la
+                                        atmósfera de la época samurái.</p>
+
+                                    <p class="card-text">Los visitantes pueden disfrutar de diversas actividades, como
+                                        vestirse con trajes de samurái o geisha, participar en espectáculos de ninjas y
+                                        explorar el pueblo mientras aprenden sobre la vida y las costumbres de la época
+                                        Edo. El parque también cuenta con una serie de atracciones y juegos interactivos
+                                        que hacen que la historia cobre vida.</p>
+
+                                    <p class="card-text">Además, Edo Wonderland ofrece experiencias culturales únicas,
+                                        como aprender artes tradicionales, probar comida típica de la era Edo y asistir
+                                        a representaciones teatrales. Este parque es una excelente opción para quienes
+                                        desean sumergirse en la historia japonesa de manera divertida y educativa.</p>
+
                                     <p class="card-text text-center">Haz click para volver</p>
                                 </div>
                             </div>
                         </div>
                     </label>
                 </div>
-                <div class="col-12 col-md-4 mb-4">
+                <div id="flip6" class="col-12 col-md-4 mb-4">
                     <label class="tarjeta">
                         <input type="checkbox">
                         <div class="tarjeta-contenido">
-                            <div class="tarjeta-frontal">
-                                <img src="img/que-ver6.jpg" class="card-img-top" alt="...">
+                            <div id="ffront6" class="tarjeta-frontal">
+                                <img src="img/que-ver6.jpg" class="card-img-top" alt="Campos de flores, Hokkaido">
                                 <div class="card-body text-center">
-                                    <h5 class="card-title">Título de la Tarjeta 1</h5>
+                                    <h5 class="card-title">Campos de flores, Hokkaido</h5>
                                     <p class="card-text">Haz click para saber más</p>
                                 </div>
                             </div>
-                            <div class="tarjeta-posterior">
+                            <div id="fback6" class="tarjeta-posterior p-3">
                                 <div class="card-body">
-                                    <h5 class="card-title text-center">Contenido Alternativo</h5>
+                                    <h5 class="card-title text-center">Campos de flores, Hokkaido</h5>
+                                    <p class="card-text">Los campos de flores de Hokkaido son uno de los destinos más
+                                        coloridos y hermosos de Japón. Durante la primavera y el verano, la isla se
+                                        llena de vibrantes colores gracias a los vastos campos de lavanda, girasoles,
+                                        amapolas y muchas otras flores que florecen en esta región.</p>
+
+                                    <p class="card-text">La temporada de lavanda, que alcanza su pico en julio, es
+                                        particularmente famosa. Los campos de lavanda en lugares como Furano ofrecen
+                                        impresionantes vistas, creando un mar de flores moradas que atrae a turistas de
+                                        todo el mundo.</p>
+
+                                    <p class="card-text">Además de la lavanda, Hokkaido es hogar de numerosos jardines y
+                                        parques donde los visitantes pueden disfrutar de la belleza de las flores
+                                        mientras exploran paisajes montañosos y áreas rurales. Estos campos no solo son
+                                        un festín visual, sino también una experiencia que conecta a los turistas con la
+                                        naturaleza y la tranquilidad de la isla.</p>
+
                                     <p class="card-text text-center">Haz click para volver</p>
                                 </div>
                             </div>
@@ -208,9 +321,9 @@
     </main>
 
     <footer class="text-center">
-        <p><span class="d-none d-lg-inline">Teléfono: <a href="tel:123456789">123-456-789</a> |</span> <span class="d-none d-md-inline">Correo: <a href="mailto:info@dominio.com">info@dominio.com</a></span></p>
-        <p class="d-none d-lg-block">Dirección</p>
-        <p>&copy2024 Dominio. Todos los derechos reservados.</p>
+        <p><span class="d-none d-lg-inline">Teléfono: <a href="tel:123456789">123-456-789</a> |</span> <span
+                class="d-none d-md-inline">Correo: <a href="mailto:info@dominio.com">info@nihongo.com</a></span></p>
+        <p>&copy2024 Viajes Turísticos Nihon-GO. Todos los derechos reservados.</p>
     </footer>
 
 </div>

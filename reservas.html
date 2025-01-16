@@ -2,9 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <meta name="description" content="descripción">
-    <meta name="keywords" content="keywords">
+    <title>Viajes Nihon-GO</title>
+    <meta name="description" content="Viajes turísticos Nihongo, conoce Japón en español">
+    <meta name="keywords" content="Japón, Nihon, viajes, turismo, español, japonés, vacaciones, vuelos, blog">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+    </style>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/miestilo.css">
@@ -13,45 +17,54 @@
 <body>
 <div class="container-fluid p-0">
     <header class="pe-2">
-        <nav class="navbar navbar-expand-lg navbar-dark ">
-            <div class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img src="img/logo.png" alt="logo"></a></div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
+        <nav id="navegacion" class="navbar navbar-expand-lg navbar-dark ">
+            <span id="logo" class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img
+                    src="img/logo.png" alt="logo"></a></span>
+            <span id="titulo"><h1>Nihon-GO</h1></span>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item active">
+                    <li id="inicio" class="nav-item header active">
                         <a class="nav-link" href="main.html" target="_blank">Inicio</a>
                     </li>
-                    <li class="nav-item">
+                    <li id="reservas" class="nav-item header">
                         <a class="nav-link" href="reservas.html" target="_blank">Reservas</a>
                     </li>
-                    <li class="nav-item">
+                    <li id="galeria" class="nav-item header">
                         <a class="nav-link" href="galeria.html" target="_blank">Galeria</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li id="menu-desplegable" class="nav-item dropdown header">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                           aria-expanded="false">
                             Japón
                         </a>
                         <ul class="dropdown-menu desplegable">
-                            <li><a class="dropdown-item" href="lugares.html">Lugares</a></li>
-                            <li><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li id="lugares"><a class="dropdown-item" href="lugares.html">Lugares</a></li>
+                            <li id="que-hacer"><a class="dropdown-item" href="que-hacer.html">¿Qué hacer?</a></li>
+                            <li id="que-ver"><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li id="tienda" class="nav-item header">
                         <a class="nav-link" href="tienda.html" target="_blank">Tienda</a>
                     </li>
-                    <li class="nav-item">
+                    <li id="blog" class="nav-item header">
                         <a class="nav-link" href="blog.html" target="_blank">Blog</a>
                     </li>
-                    <li class="nav-item">
+                    <li id="contacto" class="nav-item header">
                         <a class="nav-link" href="contacto.html" target="_blank">Contacto</a>
+                    </li>
+                    <li class="nav-item header">
+                        <a class="nav-link" href="acerca.html" target="_blank">Acerca</a>
                     </li>
                     <li class="nav-item">
                         <form id="buscar" class="form-inline" action="/buscar" method="get">
                             <div class="input-group">
-                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar" name="query">
+                                <input class="form-control" type="search" placeholder="Buscar" aria-label="Buscar"
+                                       name="query">
                                 <div class="input-group-append">
                                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                                 </div>
@@ -61,20 +74,13 @@
                 </ul>
             </div>
         </nav>
-        <div class="row">
-            <div id="titulo" class="text-start col-12 col-lg-6 ps-5"><h3>Titulo</h3></div>
-            <div id="subtitulo" class="text-end col-12 col-lg-6">
-                <p id="tag1" class="d-none d-md-block d-lg-none text-end">Subtítulo</p>
-                <p id="tag2" class="d-none d-lg-block text-end">Tag</p>
-            </div>
-        </div>
     </header>
 
     <main>
-        <div class="text-center mt-5">
+        <div class="text-center p-2">
             <h2>Formulario de reserva</h2>
         </div>
-        <form action="/action_page.php" class="p-5 my-3">
+        <form id="formulario-reserva" action="/action_page.php" class="p-5" method="post">
             <fieldset>
                 <legend>Datos personales</legend>
                 <div class="row">
@@ -84,7 +90,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="bi bi-person"></i></span>
                             </div>
-                            <input type="text" id="nombre" class="form-control" name="nombre">
+                            <input type="text" id="nombre" class="form-control" name="nombre" required>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
@@ -93,7 +99,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="bi bi-telephone"></i></span>
                             </div>
-                            <input type="tel" id="telefono" class="form-control" name="telefono">
+                            <input type="tel" id="telefono" class="form-control" name="telefono" required>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
@@ -102,7 +108,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="bi bi-envelope"></i></span>
                             </div>
-                            <input type="email" id="email" class="form-control" name="email">
+                            <input type="email" id="email" class="form-control" name="email" required>
                         </div>
                     </div>
                 </div>
@@ -117,13 +123,15 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="bi bi-geo-alt"></i></span>
                             </div>
-                            <select id="zona" name="zona" class="form-select" aria-label="zona">
+                            <select id="zona" name="zona" class="form-select" aria-label="zona" required>
                                 <option selected>zona</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
+                                <option value="1">Hokkaido</option>
+                                <option value="2">Yamagata</option>
+                                <option value="3">Tokio</option>
+                                <option value="4">Kyoto</option>
+                                <option value="5">Nagano</option>
+                                <option value="6">Fukuoka</option>
+                                <option value="7">Okinawa</option>
                             </select>
                         </div>
                     </div>
@@ -133,7 +141,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="bi bi-calendar4-week"></i></span>
                             </div>
-                            <input type="date" id="fecha-entrada" class="form-control" name="fecha-entrada">
+                            <input type="date" id="fecha-entrada" class="form-control" name="fecha-entrada" required>
                         </div>
                     </div>
                     <div class="col-xs-12 col-md-4">
@@ -142,7 +150,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="bi bi-calendar4-week"></i></span>
                             </div>
-                            <input type="date" id="fecha-salida" class="form-control" name="fecha-salida">
+                            <input type="date" id="fecha-salida" class="form-control" name="fecha-salida" required>
                         </div>
                     </div>
                 </div>
@@ -153,7 +161,7 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="bi bi-suitcase"></i></span>
                             </div>
-                            <select id="plazas" name="plazas" class="form-select" aria-label="plazas">
+                            <select id="plazas" name="plazas" class="form-select" aria-label="plazas" required>
                                 <option selected>plazas</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -169,7 +177,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="bi bi-lamp"></i></span>
                             </div>
-                            <select id="habitaciones" name="habitaciones" class="form-select" aria-label="habitaciones">
+                            <select id="habitaciones" name="habitaciones" class="form-select" aria-label="habitaciones"
+                                    required>
                                 <option selected>habitaciones</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -185,11 +194,11 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="bi bi-award"></i></span>
                             </div>
-                            <select id="modalidad" name="modalidad" class="form-select" aria-label="modalidad">
+                            <select id="modalidad" name="modalidad" class="form-select" aria-label="modalidad" required>
                                 <option selected>modalidad</option>
-                                <option value="2">Básica</option>
-                                <option value="3">Extra</option>
-                                <option value="4">Deluxe</option>
+                                <option value="1">Básica</option>
+                                <option value="2">Extra</option>
+                                <option value="3">Deluxe</option>
                             </select>
                         </div>
                     </div>
@@ -201,7 +210,8 @@
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="bi bi-credit-card"></i></span>
                             </div>
-                            <select id="método-pago" name="método-pago" class="form-select" aria-label="método-pago">
+                            <select id="método-pago" name="método-pago" class="form-select" aria-label="método-pago"
+                                    required>
                                 <option selected>método de pago</option>
                                 <option value="1">tarjeta de crédito</option>
                                 <option value="2">transferencia</option>
@@ -223,12 +233,10 @@
             </div>
         </form>
     </main>
-
     <footer class="text-center">
         <p><span class="d-none d-lg-inline">Teléfono: <a href="tel:123456789">123-456-789</a> |</span> <span
-                class="d-none d-md-inline">Correo: <a href="mailto:info@dominio.com">info@dominio.com</a></span></p>
-        <p class="d-none d-lg-block">Dirección</p>
-        <p>&copy2024 Dominio. Todos los derechos reservados.</p>
+                class="d-none d-md-inline">Correo: <a href="mailto:info@dominio.com">info@nihongo.com</a></span></p>
+        <p>&copy2024 Viajes Turísticos Nihon-GO. Todos los derechos reservados.</p>
     </footer>
 
 </div>

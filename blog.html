@@ -2,9 +2,13 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title></title>
-    <meta name="description" content="descripción">
-    <meta name="keywords" content="keywords">
+    <title>Viajes Nihon-GO</title>
+    <meta name="description" content="Viajes turísticos Nihongo, conoce Japón en español">
+    <meta name="keywords" content="Japón, Nihon, viajes, turismo, español, japonés, vacaciones, vuelos, blog">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap');
+    </style>
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/miestilo.css">
@@ -13,43 +17,48 @@
 <body>
 <div class="container-fluid p-0">
     <header class="pe-2">
-        <nav class="navbar navbar-expand-lg navbar-dark ">
-            <div class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img
-                    src="img/logo.png" alt="logo"></a></div>
+        <nav id="navegacion" class="navbar navbar-expand-lg navbar-dark ">
+            <span id="logo" class="justify-content-start"><a class="navbar-brand justifycontent-start" href="main.html"><img
+                    src="img/logo.png" alt="logo"></a></span>
+            <span id="titulo"><h1>Nihon-GO</h1></span>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Activar navegacion">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item header active">
+                    <li id="inicio" class="nav-item header active">
                         <a class="nav-link" href="main.html" target="_blank">Inicio</a>
                     </li>
-                    <li class="nav-item header">
+                    <li id="reservas" class="nav-item header">
                         <a class="nav-link" href="reservas.html" target="_blank">Reservas</a>
                     </li>
-                    <li class="nav-item header">
+                    <li id="galeria" class="nav-item header">
                         <a class="nav-link" href="galeria.html" target="_blank">Galeria</a>
                     </li>
-                    <li class="nav-item dropdown header">
+                    <li id="menu-desplegable" class="nav-item dropdown header">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                            aria-expanded="false">
                             Japón
                         </a>
                         <ul class="dropdown-menu desplegable">
-                            <li><a class="dropdown-item" href="lugares.html">Lugares</a></li>
-                            <li><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li id="lugares"><a class="dropdown-item" href="lugares.html">Lugares</a></li>
+                            <li id="que-hacer"><a class="dropdown-item" href="que-hacer.html">¿Qué hacer?</a></li>
+                            <li id="que-ver"><a class="dropdown-item" href="que-ver.html">¿Qué ver?</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item header">
+                    <li id="tienda" class="nav-item header">
                         <a class="nav-link" href="tienda.html" target="_blank">Tienda</a>
                     </li>
-                    <li class="nav-item header">
+                    <li id="blog" class="nav-item header">
                         <a class="nav-link" href="blog.html" target="_blank">Blog</a>
                     </li>
-                    <li class="nav-item header">
+                    <li id="contacto" class="nav-item header">
                         <a class="nav-link" href="contacto.html" target="_blank">Contacto</a>
+                    </li>
+                    <li class="nav-item header">
+                        <a class="nav-link" href="acerca.html" target="_blank">Acerca</a>
                     </li>
                     <li class="nav-item">
                         <form id="buscar" class="form-inline" action="/buscar" method="get">
@@ -65,64 +74,195 @@
                 </ul>
             </div>
         </nav>
-        <div class="row">
-            <div id="titulo" class="text-start col-12 col-lg-6 ps-5"><h3>Titulo</h3></div>
-            <div id="subtitulo" class="text-end col-12 col-lg-6">
-                <p id="tag1" class="d-none d-md-block d-lg-none text-end">Subtítulo</p>
-                <p id="tag2" class="d-none d-lg-block text-end">Tag</p>
-            </div>
-        </div>
     </header>
 
     <main>
-        <div class="tab-style">
-        <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item tabs" role="presentation">
-                <button class="nav-link tabs active" id="home-tab" data-bs-toggle="tab" data-bs-target="#ult-tab-pane"
-                        type="button" role="tab" aria-controls="ult-tab-pane" aria-selected="true">Últimas
-                </button>
-            </li>
-            <li class="nav-item tabs" role="presentation">
-                <button class="nav-link tabs" id="profile-tab" data-bs-toggle="tab" data-bs-target="#pag2-tab-pane"
-                        type="button" role="tab" aria-controls="pag2-tab-pane" aria-selected="false">Página 2
-                </button>
-            </li>
-            <li class="nav-item tabs" role="presentation">
-                <button class="nav-link tabs" id="contact-tab" data-bs-toggle="tab" data-bs-target="#pag3-tab-pane"
-                        type="button" role="tab" aria-controls="pag3-tab-pane" aria-selected="false">Página 3
-                </button>
-            </li>
-        </ul>
+        <div id="blog-tabs" class="tab-style">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item tabs" role="presentation">
+                    <button class="nav-link tabs active" id="home-tab" data-bs-toggle="tab"
+                            data-bs-target="#ult-tab-pane"
+                            type="button" role="tab" aria-controls="ult-tab-pane" aria-selected="true">Últimas
+                    </button>
+                </li>
+                <li class="nav-item tabs" role="presentation">
+                    <button class="nav-link tabs" id="profile-tab" data-bs-toggle="tab" data-bs-target="#pag2-tab-pane"
+                            type="button" role="tab" aria-controls="pag2-tab-pane" aria-selected="false">Página 2
+                    </button>
+                </li>
+                <li class="nav-item tabs" role="presentation">
+                    <button class="nav-link tabs" id="contact-tab" data-bs-toggle="tab" data-bs-target="#pag3-tab-pane"
+                            type="button" role="tab" aria-controls="pag3-tab-pane" aria-selected="false">Página 3
+                    </button>
+                </li>
+            </ul>
         </div>
         <div class="row">
             <div class="col12 col-md-9">
                 <div class="tab-content" id="contenido-tabs">
                     <div class="tab-pane fade show active" id="ult-tab-pane" role="tabpanel" aria-labelledby="ult-tab"
                          tabindex="0">
-                        <section class="p-4 mt-3">
-                            <article class="p-2">
-                                <hgroup class="mb-2">
-                                    <h5>Título</h5>
+                        <section id="ult-entradas" class="p-4 mt-3">
+                            <article id="ult-entrada-1" class="entradas-blog p-2">
+                                <hgroup class="p-4 mb-2">
+                                    <h5 class="">Dawn Avatar Robot Café: Un Vistazo al Futuro de la Hostelería</h5>
                                     <time datetime="2025-01-14" pubdate>posted 14-01-2025</time>
                                     <cite>Autor</cite>
+                                    <p class="mt-4">El <strong>Dawn Avatar Robot Café</strong>, ubicado en Tokio, es un
+                                        innovador
+                                        café que utiliza robots y avatares digitales para ofrecer una experiencia única
+                                        a los clientes. Inaugurado en 2021, este café es pionero en Japón, utilizando
+                                        tecnología avanzada para interactuar con los visitantes de una manera
+                                        completamente nueva.</p>
+
+
+                                    <p>La propuesta del café se basa en el uso de "avatars" controlados a distancia por
+                                        empleados, algunos de los cuales tienen discapacidades que les impiden trabajar
+                                        físicamente en el local. Estos avatares permiten a los trabajadores operar
+                                        robots desde su hogar o centro de trabajo, lo que les da la oportunidad de
+                                        participar en el mundo laboral de una manera inclusiva. Los clientes pueden
+                                        interactuar con estos avatares que, a través de pantallas en los robots,
+                                        muestran las caras de los trabajadores.</p>
+                                    <figure class="figure float-start me-2">
+                                        <img src="img/blog1.jpg" class="figure-img img-fluid" alt="dawn robot café">
+                                        <figcaption class="figure-caption figcaption-custom">Una persona con
+                                            discapacidad controlando un robot
+                                        </figcaption>
+                                    </figure>
+
+
+                                    <p>El ambiente del Dawn Avatar Robot Café es futurista y minimalista, evocando un
+                                        estilo de ciencia ficción. Los robots realizan tareas como tomar pedidos y
+                                        servir bebidas, creando una experiencia eficiente y fluida. Además, el café
+                                        ofrece una experiencia de realidad aumentada que agrega un toque de magia
+                                        tecnológica a la visita.</p>
+
+                                    <p>Más allá de la fascinación tecnológica, el café representa un esfuerzo por
+                                        integrar a personas con discapacidades al mundo laboral de una manera
+                                        innovadora. La combinación de robótica, inteligencia artificial y la interacción
+                                        humana crea una experiencia única para los clientes, mientras abre nuevas
+                                        posibilidades de empleo para quienes enfrentan barreras físicas.</p>
+
+                                    <p>El Dawn Avatar Robot Café no solo es un lugar para disfrutar de un café, sino
+                                        también un vistazo al futuro de la hostelería y la inclusión social, donde la
+                                        tecnología y la humanidad se encuentran para ofrecer una experiencia
+                                        memorable.</p>
                                 </hgroup>
-                                <p>Texto</p>
                             </article>
-                            <article class="p-2 mt-4">
-                                <hgroup class="mb-2">
-                                    <h5>Título</h5>
+                            <article id="ult-entrada-2" class="entradas-blog p-2 mt-4">
+                                <hgroup class="p-4 mb-2">
+                                    <h5>La Baja Natalidad y el Envejecimiento de la Población Japonesa: Desafíos para el
+                                        Futuro</h5>
                                     <time datetime="2025-01-14" pubdate>posted 14-01-2025</time>
                                     <cite>Autor</cite>
+                                    <p class="mt-4">Japón enfrenta uno de los problemas demográficos más complejos del
+                                        mundo: la baja natalidad y el envejecimiento acelerado de su población. Estos
+                                        fenómenos están estrechamente vinculados y representan desafíos importantes para
+                                        la economía, los servicios sociales y el futuro de la nación. Japón ha tenido
+                                        una de las tasas de natalidad más bajas del mundo durante décadas, mientras que
+                                        su población de personas mayores sigue aumentando, lo que plantea serias
+                                        preocupaciones sobre el futuro equilibrio social y económico.</p>
+
+                                    <p>La tasa de natalidad en Japón ha ido disminuyendo debido a varios factores, como
+                                        la inseguridad laboral, la falta de apoyo a las familias y el alto costo de
+                                        vida. Además, las mujeres japonesas, a pesar de su creciente nivel educativo y
+                                        profesional, a menudo enfrentan dificultades para equilibrar la vida laboral y
+                                        familiar, lo que ha contribuido a la reducción de nacimientos.</p>
+
+                                    <p>Por otro lado, el envejecimiento de la población japonesa se refleja en el
+                                        aumento de la esperanza de vida, que ha generado una mayor proporción de
+                                        personas mayores en comparación con la población joven. Esta tendencia genera
+                                        presión sobre el sistema de pensiones y atención médica, ya que una menor
+                                        cantidad de trabajadores debe sustentar una población jubilada cada vez
+                                        mayor.</p>
+
+                                    <p>A continuación, se presentan algunos datos clave sobre la población japonesa y
+                                        sus tendencias demográficas:</p>
+
+                                    <table class="table table-bordered table-striped">
+                                        <thead>
+                                        <tr>
+                                            <th>Año</th>
+                                            <th>Población Total (millones)</th>
+                                            <th>Población Mayor de 65 Años (%)</th>
+                                            <th>Tasa de Natalidad (nacimientos por 1,000 habitantes)</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>2010</td>
+                                            <td>128.06</td>
+                                            <td>23.1%</td>
+                                            <td>8.1</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2020</td>
+                                            <td>125.8</td>
+                                            <td>28.7%</td>
+                                            <td>7.0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2030 (proyección)</td>
+                                            <td>120.0</td>
+                                            <td>33.6%</td>
+                                            <td>6.5</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <p>Para abordar estos problemas, el gobierno japonés ha implementado políticas como
+                                        incentivos para aumentar la natalidad, promoción de la inmigración y reformas
+                                        laborales para mejorar la calidad de vida de las personas mayores. Sin embargo,
+                                        las soluciones aún son limitadas y requieren de un enfoque más integral y
+                                        sostenible.</p>
+
                                 </hgroup>
-                                <p>Texto</p>
                             </article>
-                            <article class="p-2 mt-4">
-                                <hgroup class="mb-2">
-                                    <h5>Título</h5>
+                            <article id="ult-entrada-3" class="entradas-blog p-2 mt-4">
+                                <hgroup class="p-4 mb-2">
+                                    <h5>El Onryō Japonés: El Espíritu Vengativo del Folclore Japonés</h5>
                                     <time datetime="2025-01-14" pubdate>posted 14-01-2025</time>
                                     <cite>Autor</cite>
+                                    <p class="mt-4">La figura del <strong>onryō</strong> es una de las más fascinantes y
+                                        aterradoras del folclore japonés. Este tipo de espíritu vengativo tiene su
+                                        origen en las antiguas creencias sobre los muertos y su capacidad para regresar
+                                        al mundo de los vivos para vengarse de aquellos que les hicieron daño en vida.
+                                        El término "onryō" se traduce como "espíritu vengativo" y está asociado con
+                                        espíritus que buscan justicia o venganza a través de acciones sobrenaturales.
+                                    </p>
+                                    <figure class="figure float-start me-2">
+                                        <img src="img/blog2.jpg" class="figure-img img-fluid" alt="Sadako">
+                                        <figcaption class="figure-caption figcaption-custom">Sadako de la película "The
+                                            Ring"
+                                        </figcaption>
+                                    </figure>
+
+                                    <p>El onryō es especialmente conocido por su capacidad para causar daños a los
+                                        vivos, ya sea a través de enfermedades, desastres naturales o muertes
+                                        misteriosas. Las historias de onryō se encuentran en numerosas leyendas, y su
+                                        imagen es recurrente en el cine y la literatura japonesa. A menudo, estos
+                                        espíritus son representados como mujeres de rostro pálido y cabello largo, con
+                                        un aura de tristeza y furia.</p>
+
+
+                                    <p>Una de las figuras más emblemáticas de un onryō es la famosa <em>Sadako
+                                        Yamamura</em>, protagonista de la película "Ringu" (1998), cuyo espíritu
+                                        vengativo aterroriza a aquellos que ven su video maldito. La historia de Sadako,
+                                        aunque ficticia, está inspirada en las viejas leyendas de onryō, que han sido
+                                        parte integral del imaginario colectivo japonés durante siglos.</p>
+
+
+                                    <p>En la tradición japonesa, se cree que para apaciguar a un onryō y evitar su
+                                        venganza, es necesario llevar a cabo rituales y ofrendas que permitan al
+                                        espíritu encontrar la paz. Estos rituales son una forma de resolver el conflicto
+                                        entre los vivos y los muertos, algo que ha influido profundamente en la cultura
+                                        y las creencias espirituales de Japón.</p>
+
+                                    <p>Hoy en día, la figura del onryō sigue siendo un símbolo de la conexión entre el
+                                        mundo de los vivos y el de los muertos, recordando la importancia de la
+                                        justicia, el respeto y la memoria en la cultura japonesa.</p>
+
                                 </hgroup>
-                                <p>Texto</p>
                             </article>
 
                         </section>
@@ -131,73 +271,296 @@
 
                     <div class="tab-pane fade" id="pag2-tab-pane" role="tabpanel" aria-labelledby="pag2-tab"
                          tabindex="0">
-                        <section class="p-4 mt-3">
-                            <article>
-                                <hgroup class="mb-2">
-                                    <h5>Título</h5>
+                        <section id="entrada-pag2" class="p-4 mt-3">
+                            <article id="entrada-4" class="entradas-blog">
+                                <hgroup class="p-4 mb-2">
+                                    <h5>Yakushima: El Bosque que Inspiró a ‘La Princesa Mononoke’</h5>
                                     <time datetime="2025-01-14" pubdate>posted 14-01-2025</time>
                                     <cite>Autor</cite>
-                                </hgroup>
-                                <p>Texto</p>
-                            </article>
-                            <article>
-                                <hgroup class="mb-2">
-                                    <h5>Título</h5>
-                                    <time datetime="2025-01-14" pubdate>posted 14-01-2025</time>
-                                    <cite>Autor</cite>
-                                </hgroup>
-                                <p>Texto</p>
-                            </article>
-                            <article>
-                                <hgroup class="mb-2">
-                                    <h5>Título</h5>
-                                    <time datetime="2025-01-14" pubdate>posted 14-01-2025</time>
-                                    <cite>Autor</cite>
-                                </hgroup>
-                                <p>Texto</p>
-                            </article>
+                                    <p class="mt-4">El <strong>bosque de Yakushima</strong>, ubicado en la isla de
+                                        Yakushima, es uno de los lugares más místicos y biodiversos de Japón. Este
+                                        bosque, que ha sido declarado Patrimonio de la Humanidad por la UNESCO, es
+                                        famoso por sus antiguos cedros, algunos de los cuales tienen más de 1,000 años
+                                        de edad. Además de su impresionante biodiversidad, Yakushima ha servido de
+                                        inspiración para numerosas obras, siendo una de las más destacadas la película
+                                        <em>‘La Princesa Mononoke’</em> de Hayao Miyazaki.</p>
+                                    <figure class="figure float-start me-2">
+                                        <img src="img/blog3.webp" class="figure-img img-fluid" alt="Yakushima">
+                                        <figcaption class="figure-caption figcaption-custom">El bosque de Yakushima
+                                        </figcaption>
+                                    </figure>
 
+                                    <p>La película, lanzada en 1997, presenta un mundo ficticio en el que los espíritus
+                                        de los árboles y los animales luchan contra la destrucción humana del medio
+                                        ambiente. La atmósfera densa y mágica de los bosques de Yakushima se refleja
+                                        claramente en el paisaje de la película, especialmente en las escenas que
+                                        muestran los grandes árboles milenarios y la vegetación exuberante que parece
+                                        cobrar vida. Se dice que Miyazaki se inspiró directamente en los paisajes de
+                                        Yakushima al crear los escenarios de la película, lo que hace que el bosque sea
+                                        aún más emblemático para los fanáticos del cine y la naturaleza.</p>
+
+
+                                    <p>En ‘La Princesa Mononoke’, los árboles y los espíritus naturales juegan un papel
+                                        crucial en la trama, lo que refleja la profunda conexión espiritual entre la
+                                        naturaleza y los seres humanos en la cultura japonesa. Esta conexión es evidente
+                                        en Yakushima, donde el respeto por la naturaleza y la preservación del medio
+                                        ambiente son elementos fundamentales. Los antiguos cedros de Yakushima, como el
+                                        famoso “Jomon Sugi”, son considerados guardianes del bosque, y su veneración es
+                                        similar a la que se muestra en la película.</p>
+
+                                    <p>El bosque de Yakushima no solo es un lugar que alimenta la imaginación, sino
+                                        también un símbolo de la importancia de conservar nuestros ecosistemas. Al
+                                        visitar Yakushima, los turistas pueden experimentar la misma atmósfera mágica
+                                        que Miyazaki plasmó en su obra, lo que convierte al bosque en un destino único
+                                        tanto para los amantes de la naturaleza como para los cinéfilos que buscan
+                                        conectar con la esencia de ‘La Princesa Mononoke’.</p>
+
+                                </hgroup>
+                            </article>
+                            <article id="entrada-5" clss="entradas-blog">
+                                <hgroup class="p-4 mb-2">
+                                    <h5>Umi Jigoku: El Infierno Azul de Beppu, Japón</h5>
+                                    <time datetime="2025-01-14" pubdate>posted 14-01-2025</time>
+                                    <cite>Autor</cite>
+                                    <p class="mt-4">El <strong>Umi Jigoku</strong>, también conocido como el "Infierno
+                                        Azul", es uno de los atractivos naturales más impresionantes de Japón, ubicado
+                                        en Beppu, en la isla de Kyushu. Este onsen (baño termal) se caracteriza por sus
+                                        aguas de un intenso color azul debido a la alta concentración de minerales como
+                                        el azufre. Es una de las ocho fuentes termales de Beppu, conocidas
+                                        colectivamente como los "Jigoku" o "Infiernos".</p>
+                                    <figure class="figure float-end ms-2">
+                                        <img src="img/blog4.jpg" class="figure-img img-fluid" alt="Umi Jigoku">
+                                        <figcaption class="figure-caption figcaption-custom">Las aguas termales del Umi
+                                            Jigoku
+                                        </figcaption>
+                                    </figure>
+
+                                    <p>Lo que hace único al Umi Jigoku es su espectacular color y el contraste con el
+                                        paisaje circundante. Aunque no es apto para bañarse debido a las altas
+                                        temperaturas, su belleza visual atrae a miles de turistas cada año. Los
+                                        visitantes pueden caminar alrededor de los estanques y disfrutar de vistas
+                                        impresionantes, mientras aprenden sobre la historia y las propiedades de las
+                                        aguas termales.</p>
+
+                                    <p>La zona también cuenta con un pequeño jardín y una casa de té, donde los turistas
+                                        pueden relajarse mientras observan el increíble entorno. Además, el Umi Jigoku
+                                        es conocido por la presencia de una estatua de Buda, que se alza sobre las
+                                        aguas, añadiendo un toque de serenidad al paisaje volcánico.</p>
+
+                                    <p>El <em>Umi Jigoku</em> no solo es un lugar de belleza natural, sino también un
+                                        ejemplo del vínculo profundo entre los japoneses y sus aguas termales. Las aguas
+                                        termales en Japón no solo son vistas como un lujo, sino también como una fuente
+                                        de salud y bienestar, y el Umi Jigoku es un excelente ejemplo de cómo la
+                                        naturaleza y la cultura japonesa se combinan de manera perfecta.</p>
+
+                                </hgroup>
+                            </article>
+                            <article id="entrada-6" class="entradas-blog">
+                                <hgroup class="p-4 mb-2">
+                                    <h5>Okunoin: El Sagrado Cementerio de Koyasan</h5>
+                                    <time datetime="2025-01-14" pubdate>posted 14-01-2025</time>
+                                    <cite>Autor</cite>
+                                    <p class="mt-4">Okunoin es uno de los lugares más espirituales y misteriosos de
+                                        Japón. Ubicado en <strong>Koyasan</strong>, en la región montañosa de Wakayama,
+                                        Okunoin es el cementerio más grande de Japón y un importante destino para los
+                                        peregrinos budistas. Este lugar alberga miles de tumbas, muchas de ellas
+                                        dedicadas a figuras importantes de la historia religiosa de Japón, incluidos
+                                        monjes y emperadores, lo que convierte a Okunoin en un lugar de gran significado
+                                        histórico y espiritual.</p>
+                                    <figure class="figure float-start me-2">
+                                        <img src="img/blog5.jpg" class="figure-img img-fluid" alt="linterna de piedra">
+                                        <figcaption class="figure-caption figcaption-custom">Las linternas de piedra del
+                                            Okunoin
+                                        </figcaption>
+                                    </figure>
+
+
+                                    <p>El acceso a Okunoin es una experiencia única. Los visitantes deben recorrer un
+                                        largo y sereno sendero flanqueado por cientos de miles de estelas funerarias. El
+                                        sendero de <em>1.5 kilómetros</em> que lleva al santuario está rodeado por altos
+                                        árboles que proporcionan una atmósfera tranquila y reverente. A lo largo del
+                                        camino, los visitantes pueden encontrar monumentos dedicados a antiguos monjes y
+                                        otros personajes ilustres que han sido venerados a lo largo de los siglos.</p>
+
+                                    <p>En el centro de Okunoin se encuentra el <strong>Garan</strong>, el santuario
+                                        donde se cree que reposa el cuerpo del fundador del budismo Shingon, <em>Kōbō
+                                            Daishi</em>. Según la tradición, Kōbō Daishi permanece en un estado de
+                                        meditación eterna, esperando el regreso de Miroku, el Buda del futuro. Esta
+                                        creencia es central en la espiritualidad de Okunoin, que atrae a miles de
+                                        visitantes cada año, quienes vienen a rendir homenaje y buscar paz espiritual.
+                                    </p>
+
+                                    <p>El ambiente místico de Okunoin, especialmente al amanecer o al atardecer, cuando
+                                        la niebla envuelve el sendero y las estatuas parecen cobrar vida, crea una
+                                        sensación de conexión profunda con lo divino. Es un lugar donde el pasado y el
+                                        presente se encuentran, y donde la tranquilidad y la espiritualidad impregnan el
+                                        aire.</p>
+
+                                    <p>Visitar Okunoin no solo es una experiencia cultural, sino también un viaje
+                                        espiritual que permite a los visitantes reflexionar sobre la vida, la muerte y
+                                        el más allá. Sin duda, es un lugar que deja una huella indeleble en aquellos que
+                                        tienen la suerte de recorrerlo.</p>
+                                </hgroup>
+                            </article>
                         </section>
                     </div>
 
 
                     <div class="tab-pane fade" id="pag3-tab-pane" role="tabpanel" aria-labelledby="pag3-tab"
                          tabindex="0">
-                        <section class="p-4 mt-3">
-                            <article>
-                                <hgroup class="mb-2">
-                                    <h5>Título</h5>
+                        <section id="entrada-pag3" class="entradas-blog p-4 mt-3">
+                            <article id="entrada-7">
+                                <hgroup class="p-4 mb-2">
+                                    <h5>El Cine Japonés: Una Ventana al Alma de Japón</h5>
                                     <time datetime="2025-01-14" pubdate>posted 14-01-2025</time>
                                     <cite>Autor</cite>
-                                </hgroup>
-                                <p>Texto</p>
-                            </article>
-                            <article>
-                                <hgroup class="mb-2">
-                                    <h5>Título</h5>
-                                    <time datetime="2025-01-14" pubdate>posted 14-01-2025</time>
-                                    <cite>Autor</cite>
-                                </hgroup>
-                                <p>Texto</p>
-                            </article>
-                            <article>
-                                <hgroup class="mb-2">
-                                    <h5>Título</h5>
-                                    <time datetime="2025-01-14" pubdate>posted 14-01-2025</time>
-                                    <cite>Autor</cite>
-                                </hgroup>
-                                <p>Texto</p>
-                            </article>
+                                    <p class="mt-4">El <strong>cine japonés</strong> es una de las industrias
+                                        cinematográficas más influyentes y respetadas a nivel mundial. Desde sus inicios
+                                        en el siglo XX, ha producido algunas de las películas más aclamadas por la
+                                        crítica, con un estilo único que combina la tradición con la innovación. A lo
+                                        largo de las décadas, el cine japonés ha capturado las emociones, las
+                                        tradiciones y los dilemas sociales de la cultura japonesa, convirtiéndose en una
+                                        ventana al alma del país.</p>
 
+                                    <p>Algunos de los directores más reconocidos internacionalmente han nacido en Japón,
+                                        y sus obras siguen siendo objeto de estudio y admiración. Entre ellos
+                                        destacan:</p>
+
+                                    <ul>
+                                        <li><strong>Akira Kurosawa</strong>, conocido por su épica <em>“Los Siete
+                                            Samuráis”</em>, que influyó en todo el cine de acción moderno.
+                                        </li>
+                                        <li><strong>Hayao Miyazaki</strong>, el maestro de la animación, creador de
+                                            películas como <em>“Mi vecino Totoro”</em> y <em>“El viaje de Chihiro”</em>,
+                                            que no solo cautivan por su belleza visual, sino por sus profundas lecciones
+                                            sobre la vida y la naturaleza.
+                                        </li>
+                                        <li><strong>Yasujiro Ozu</strong>, célebre por sus reflexivas películas
+                                            familiares, como <em>“Cuentos de Tokio”</em>, que capturan las tensiones
+                                            sociales y emocionales de Japón post-guerra.
+                                        </li>
+                                    </ul>
+
+                                    <p>El cine japonés también ha sido pionero en géneros como el <strong>anime</strong>,
+                                        que ha alcanzado una popularidad global. Con su mezcla de acción, fantasía y
+                                        exploración emocional, el anime japonés ha dejado una huella imborrable en la
+                                        cultura pop mundial. Algunas de las obras más representativas del anime
+                                        incluyen:</p>
+
+                                    <ul class="list-group">
+                                        <li class="list-group-item"><em>“Akira”</em> (1988), un clásico que ayudó a
+                                            definir el futuro del anime.
+                                        </li>
+                                        <li class="list-group-item">“Neon Genesis Evangelion” (1995), un anime
+                                            psicológico que marcó una nueva era en la animación japonesa.
+                                        </li>
+                                        <li class="list-group-item">“Your Name” (2016), una historia de amor y destino
+                                            que encantó a audiencias de todo el mundo.
+                                        </li>
+                                    </ul>
+
+                                    <p>Hoy en día, el cine japonés sigue siendo una parte vital de la cultura global,
+                                        con una rica historia que continúa evolucionando y mostrando al mundo las
+                                        complejidades de la sociedad japonesa a través de su cámara.</p>
+                                </hgroup>
+                            </article>
+                            <article id="entrada-8" class="entradas-blog">
+                                <hgroup class="p-4 mb-2">
+                                    <h5>La Ropa Tradicional Japonesa: Una Historia de Estilo y Cultura</h5>
+                                    <time datetime="2025-01-14" pubdate>posted 14-01-2025</time>
+                                    <cite>Autor</cite>
+                                    <p class="mt-4">La <strong>ropa tradicional japonesa</strong> tiene una larga
+                                        historia y está profundamente ligada a la cultura y las costumbres del país.
+                                        Aunque en la vida diaria los japoneses suelen vestir ropa occidental, las
+                                        prendas tradicionales siguen siendo un símbolo de la identidad cultural y se
+                                        usan en ocasiones especiales, como ceremonias, festivales y bodas.</p>
+                                    <figure class="figure float-end ms-2">
+                                        <img src="img/blog6.png" class="figure-img img-fluid"
+                                             alt="ropa tradicional japonesa">
+                                        <figcaption class="figure-caption figcaption-custom">Pareja japonesa vistiendo
+                                            ropa tradicional
+                                        </figcaption>
+                                    </figure>
+
+                                    <p>El <strong>kimono</strong> es la prenda más icónica de Japón y representa la
+                                        elegancia y la formalidad. Esta prenda, que se caracteriza por su corte recto y
+                                        mangas largas, se suele hacer de seda y se adorna con bellos diseños que varían
+                                        según la estación del año, la ocasión y el estatus de la persona que lo lleva.
+                                        El kimono se acompaña de un <em>obi</em>, un cinturón ancho que se anuda en la
+                                        parte posterior, creando un hermoso efecto visual. Su uso requiere destreza, ya
+                                        que la correcta colocación del kimono y el obi es fundamental.</p>
+
+                                    <p>Otra prenda tradicional importante es el <strong>yukata</strong>, una versión más
+                                        ligera y cómoda del kimono, generalmente hecha de algodón. El yukata se utiliza
+                                        principalmente en festivales de verano o en baños termales, conocidos como <em>onsen</em>.
+                                        A diferencia del kimono, el yukata es más fácil de poner y, aunque igualmente
+                                        elegante, tiene un aire más relajado y festivo.</p>
+
+                                    <p>El <strong>hakama</strong> es un tipo de pantalón tradicionalmente usado por
+                                        hombres, aunque también puede ser llevado por mujeres en eventos especiales,
+                                        como ceremonias de graduación. Esta prenda, que generalmente se usa sobre un
+                                        kimono, es conocida por sus pliegues amplios y su aspecto solemne.</p>
+
+                                    <p>La ropa tradicional japonesa no solo es un símbolo de la moda, sino también de la
+                                        profunda conexión de Japón con sus tradiciones, estacionalidad y estética. Cada
+                                        prenda tiene un significado cultural y una historia que continúa siendo
+                                        celebrada en diversas ceremonias y eventos a lo largo del año.</p>
+                                </hgroup>
+                            </article>
+                            <article id="entrada-9" class="entradas-blog">
+                                <hgroup class="p-4 mb-2">
+                                    <h5>Japón Moderno: Una Fusión de Tradición y Tecnología</h5>
+                                    <time datetime="2025-01-14" pubdate>posted 14-01-2025</time>
+                                    <cite>Autor</cite>
+                                    <p class="mt-4">Japón es un país conocido por su habilidad para fusionar lo antiguo
+                                        con lo moderno. En sus vibrantes ciudades, la tradición y la tecnología
+                                        coexisten armoniosamente, creando un paisaje único donde lo histórico se
+                                        encuentra con lo futurista. Esta mezcla de elementos tradicionales y
+                                        vanguardistas es lo que define al Japón moderno.</p>
+                                    <figure class="figure float-start me-2">
+                                        <img src="img/blog7.jpeg" class="figure-img img-fluid" alt="calles de Japón">
+                                        <figcaption class="figure-caption figcaption-custom">Una transitada calle de
+                                            Japón
+                                        </figcaption>
+                                    </figure>
+
+                                    <p>Las <strong>grandes ciudades japonesas</strong> como Tokio y Osaka son un reflejo
+                                        perfecto de esta dualidad. Mientras que en los rascacielos de Tokio se
+                                        encuentran algunas de las tecnologías más avanzadas del mundo, como robots y
+                                        sistemas de transporte ultrarrápidos, también se pueden encontrar templos
+                                        budistas, jardines zen y barrios tradicionales que han permanecido prácticamente
+                                        intactos durante siglos. El contraste entre los <em>shintoistas</em> y los <em>innovadores
+                                            rascacielos</em> es un ejemplo claro de cómo el Japón moderno abraza tanto
+                                        su pasado como su futuro.</p>
+
+                                    <p>El <strong>avance tecnológico</strong> en Japón es innegable. La nación es líder
+                                        en la robótica, la inteligencia artificial y la electrónica de consumo. Grandes
+                                        empresas japonesas, como Sony, Toyota y Panasonic, son conocidas por sus
+                                        innovaciones y por empujar los límites de lo posible. Las <em>ciudades
+                                            inteligentes</em> y los sistemas de transporte público altamente eficientes
+                                        son también parte de la vida cotidiana, haciendo que Japón sea un lugar donde la
+                                        tecnología facilita enormemente la vida de las personas.</p>
+
+                                    <p>A pesar de su modernización, Japón mantiene una fuerte conexión con su <strong>cultura
+                                        y costumbres</strong>. La ceremonia del té, el arte del origami, y los
+                                        festivales tradicionales continúan siendo parte esencial de la vida diaria.
+                                        Además, las artes tradicionales como el teatro Noh, el Kabuki y el Ikebana
+                                        siguen siendo prácticas vivas y apreciadas por los japoneses.</p>
+
+                                    <p>Así, Japón ha logrado crear una identidad que combina la vanguardia de la
+                                        tecnología con el respeto por su rica historia y cultura. Este equilibrio entre
+                                        lo antiguo y lo nuevo es lo que hace que Japón moderno sea un país fascinante y
+                                        único.</p>
+                                </hgroup>
+                            </article>
                         </section>
                     </div>
-
                 </div>
 
             </div>
-            <div class="col-md-3 d-none d-md-block ">
+            <div id="arhivo-blog" class="col-md-3 d-none d-md-block ">
                 <div class="sticky-top">
-                    <details class>
+                    <details id="2025" class="archivo">
                         <summary>2025</summary>
                         <ul class="meses">
                             <li><a href="...">Enero</a></li>
@@ -214,7 +577,7 @@
                             <li><a href="...">Diciembre</a></li>
                         </ul>
                     </details>
-                    <details>
+                    <details id="2024" class="archivo">
                         <summary>2024</summary>
                         <ul class="meses">
                             <li><a href="...">Enero</a></li>
@@ -231,7 +594,7 @@
                             <li><a href="...">Diciembre</a></li>
                         </ul>
                     </details>
-                    <details>
+                    <details id="2023" class="archivo">
                         <summary>2023</summary>
                         <ul class="meses">
                             <li><a href="...">Enero</a></li>
@@ -248,7 +611,7 @@
                             <li><a href="...">Diciembre</a></li>
                         </ul>
                     </details>
-                    <details>
+                    <details id="2022" class="archivo">
                         <summary>2022</summary>
                         <ul class="meses">
                             <li><a href="...">Enero</a></li>
@@ -265,7 +628,7 @@
                             <li><a href="...">Diciembre</a></li>
                         </ul>
                     </details>
-                    <details>
+                    <details id="2021" class="archivo">
                         <summary>2021</summary>
                         <ul class="meses">
                             <li><a href="...">Enero</a></li>
@@ -282,7 +645,7 @@
                             <li><a href="...">Diciembre</a></li>
                         </ul>
                     </details>
-                    <details>
+                    <details id="2020" class="archivo">
                         <summary>2020</summary>
                         <ul class="meses">
                             <li><a href="...">Enero</a></li>
@@ -299,7 +662,7 @@
                             <li><a href="...">Diciembre</a></li>
                         </ul>
                     </details>
-                    <details>
+                    <details id="2019" class="archivo">
                         <summary>2019</summary>
                         <ul class="meses">
                             <li><a href="...">Enero</a></li>
@@ -316,7 +679,7 @@
                             <li><a href="...">Diciembre</a></li>
                         </ul>
                     </details>
-                    <details>
+                    <details id="2018" class="archivo">
                         <summary>2018</summary>
                         <ul class="meses">
                             <li><a href="...">Enero</a></li>
@@ -336,16 +699,11 @@
                 </div>
             </div>
         </div>
-
-
     </main>
-
-
     <footer class="text-center">
         <p><span class="d-none d-lg-inline">Teléfono: <a href="tel:123456789">123-456-789</a> |</span> <span
-                class="d-none d-md-inline">Correo: <a href="mailto:info@dominio.com">info@dominio.com</a></span></p>
-        <p class="d-none d-lg-block">Dirección</p>
-        <p>&copy2024 Dominio. Todos los derechos reservados.</p>
+                class="d-none d-md-inline">Correo: <a href="mailto:info@dominio.com">info@nihongo.com</a></span></p>
+        <p>&copy2024 Viajes Turísticos Nihon-GO. Todos los derechos reservados.</p>
     </footer>
 
 </div>
