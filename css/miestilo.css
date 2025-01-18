@@ -180,6 +180,12 @@ article{
     object-fit: cover;
 }
 
+.tienda .card-img-top{
+    width:100%;
+    height: 70%;
+    object-fit:cover;
+}
+
 hgroup>p{
     text-align:justify;
 }
